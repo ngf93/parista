@@ -1,0 +1,76 @@
+body {
+  font-family: 'PTSans-Bold';
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: 'PTSans-Regular';
+  color: #373737;
+  font-size: 16px;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Srbija-Sans';
+  margin: 0;
+  font-size: 32px;
+  color: #373737;
+}
+
+h2 {
+  font-family: 'Srbija-Sans';
+  font-size: 40px;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'PTSans-Bold';
+  color: #373737;
+  margin: 0;
+}
+
+hr {
+  margin: 0;
+}
+
+input {
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+
+  padding: 0 20px;
+}
+
+.empty {
+  width: 100%;
+  height: 110px;
+}
+
+.active {
+  display: block !important;
+}
+
+@media screen and (max-width: 900px) {
+  .empty {
+    height: 35px;
+  }
+}

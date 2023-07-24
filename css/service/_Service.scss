@@ -1,0 +1,435 @@
+.ServicePage {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    &__headerBanner {
+        padding: 50px 56px;
+
+        position: relative;
+
+        width: 100%;
+        height: 360px;
+        background: linear-gradient(0deg, #373737, #373737);
+        border-radius: 25px;
+
+        h3 {
+            text-align: left;
+            font-family: 'Srbija-Sans';
+            font-size: 48px;
+            color: #FFFFFF;
+            max-width: 640px;
+
+            span {
+                color: #69AEFF;
+            }
+        }
+    }
+
+    &__headerBannerButtons {
+        display: flex;
+        justify-content: space-between;
+        max-width: 544px;
+        margin-top: 38px;
+
+        button {
+            font-family: 'PTSans-Bold';
+            font-size: 16px;
+            border-radius: 10px;
+            max-width: 260px;
+            width: 100%;
+            height: 57px;
+        }
+    }
+
+    &__calculateButton {
+        color: #FFFFFF;
+        background: #69AEFF;
+    }
+
+    &__oursProjects {
+        background: #FFFFFF;
+        color: #69AEFF;
+    }
+
+    &__headerBannerMask {
+        max-width: 330px;
+        width: 100%;
+        height: 100%;
+
+        
+        position: absolute;
+        top: 0;
+        right: 120px;
+
+        overflow: hidden;
+    }
+
+    &__maskContent {
+        background-image: url('../../img/serviceGuy.png');
+        background-repeat: no-repeat;
+
+        width: 100%;
+        height: 500px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__banners {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+
+        margin-top: 37px;
+
+        h2 {
+            font-size: 32px;
+            color: #FFFFFF;
+        }
+
+        p {
+            font-size: 24px;
+            color: #FFFFFF;
+
+            margin: 6px 0;
+        }
+
+        span {
+            font-family: 'PTSans-Bold';
+            font-size: 24px;
+            color: #FFFFFF;
+
+        }
+    }
+
+    &__banner1 {
+        grid-area: 1 / 1 / 6 / 2;
+        width: 100%;
+        height: 532px;
+
+        background: url('../../img/SeviceBG1.png') , #69AEFF;
+        background-size: cover;
+        background-position: right;
+        border-radius: 25px;
+
+        padding: 30px;
+    }
+
+    &__banner2 {
+        grid-area: 1 / 2 / 4 / 4;
+        width: 100%;
+        height: 100%;
+
+        background: url('../../img/SeviceBG2.png') , #69AEFF;
+        background-size: cover;
+        background-position: right;
+        border-radius: 25px;
+
+        padding: 30px;
+    }
+
+    &__banner3 {
+        grid-area: 4 / 2 / 6 / 3;
+        width: 100%;
+        height: 100%;
+
+        background: url('../../img/SeviceBG3.png') , #373737;
+        background-size: cover;
+        background-position: center;
+        border-radius: 25px;
+
+        padding: 30px;
+    }
+
+    &__banner4 {
+        grid-area: 4 / 3 / 6 / 4; 
+        width: 100%;
+        height: 100%;
+
+        background: url('../../img/SeviceBG4.png') , #373737;
+        background-repeat: no-repeat;
+        background-position: top -10px right -20px;
+        border-radius: 25px;
+
+        padding: 30px;
+    }
+
+    &__service {
+        background-image: url('../../img/ServiceBg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 700px;
+        padding-top: 46px;
+    }
+
+    &__serviceContent {
+        width: 100%;
+        padding: 50px 56px;
+
+        background: #FFFFFF;
+        border-radius: 25px;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-top: 44px;
+            color: #373737;
+        }
+
+        p {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+    }
+
+    &__calculate {
+        margin-top: 30px;
+        height: 6px;
+        max-width: 860px;
+        width: 100%;
+        background: #F6FAFF;
+        border-radius: 5px;
+
+        position: relative;
+    }
+
+    &__calculateProgress {
+        width: 20%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background: #69AEFF;
+        border-radius: 5px;
+    }
+
+    &__slider {
+        max-width: 820px;
+        margin: 0 auto;
+
+        margin-top: 30px;
+    }
+
+    &__sliderElem {
+        background: #F2FBFF;
+        border-radius: 14px 14px 0px 0px;
+        max-width: 156px;
+        width: 100%;
+        height: 162px;
+        text-align: center;
+
+        span {
+            font-family: 'PTSans-Bold';
+            color: #373737;
+            font-size: 14px;
+        }
+    }
+
+    &__sliderImg {
+        background: url('../../img/Type_of_room.png');
+        width: 100%;
+        height: 122px;
+        margin-bottom: 10px;
+    }
+
+    &__serviceBottom {
+        max-width: 350px;
+        display: flex;
+        justify-content: space-between;
+
+        margin: 0 auto;
+        margin-top: 50px;
+
+        button {
+            max-width: 150px;
+            width: 100%;
+            height: 42px;
+            border-radius: 6px;
+
+            font-family: 'PTSans-Bold';
+            font-size: 14px;
+        }
+    }
+
+    &__servicePrevBtn {
+        border: 1px solid #69AEFF;
+        color: #69AEFF;
+        background: #FFFFFF;
+    }
+
+    &__servicePrevNext {
+        color: #FFFFFF;
+        background: #69AEFF;
+    }
+
+    &__achievements {
+        margin-top: 60px;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #373737;
+        }
+    }
+
+    &__achievementsBlocks {
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 30px;
+    }
+
+    &__achievementsBlock {
+        background: url('../../img/Benefit.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-width: 280px;
+        width: 100%;
+        height: 220px;
+        text-align: center;
+
+        padding-top: 168px;
+    }
+
+    &__schemasBlock {
+        margin-top: 60px;
+        text-align: center;
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    &__schemas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 32px;
+        grid-row-gap: 40px;
+        margin-top: 30px;
+    }
+
+    &__elem {
+        width: 100%;
+        height: 220px;
+
+        h4 {
+            margin-top: 20px;
+            font-family: PTSans-Bold;
+            font-size: 16px;
+        }
+    }
+
+    &__elemImg {
+        width: 100%;
+        height: 180px;
+
+        background: url('../../img/ServiceSchemas.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 8px;
+    }
+
+    &__price {
+        margin-top: 60px;
+        text-align: center;
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    &__serviceCard {
+        width: 100%;
+        margin-top: 20px;
+        padding: 50px 56px;
+        background: #FFFFFF;
+        border-radius: 25px;
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+    }
+
+    &__serviceCardFirst {
+        margin-top: 30px;
+    }
+
+    &__serviceTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font-family: PTSans-Bold;
+            font-size: 24px;
+        }
+
+        button {
+            background: #FFFFFF;
+            transition: 0.3s;
+        }
+    }
+
+    &__serviceCardContent {
+        
+        margin-top: 34px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        display: none;
+    }
+
+    &__serviceCardContentItems {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-size: 24px;
+        }
+    }
+
+    &__faq {
+        background: #69AEFF;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        margin-top: 60px;
+
+        h1 {
+            color: #FFFFFF;
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+}
+
+.Serviceprev {
+    z-index: 2;
+    top: 56px;
+    left: -24px;
+}
+
+.Servicenext {
+    z-index: 2;
+    top: 56px;
+    right: 24px;
+}
+
+.mt60 {
+    margin-top: 60px;
+}
+
+.p-bold {
+    font-family: 'PTSans-Bold';
+}

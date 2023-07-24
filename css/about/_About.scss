@@ -1,0 +1,126 @@
+.About {
+    margin-top: 100px;
+    
+    &__block {
+        position: relative;
+        
+        padding: 50px 56px;
+
+        background: #FFFFFF;
+        border-radius: 25px;
+
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+
+        p {
+            font-family: 'Srbija-Sans';
+            font-size: 32px;
+            max-width: 811px;
+
+            span {
+                font-size: 48px;
+            }
+
+            margin-bottom: 35px;
+        }   
+
+        h1 {
+            font-size: 40px;
+            max-width: 600px;
+        }
+    }
+
+    &__guyMask {
+        width: 412px;
+        height: 447px;
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    &__guy {
+        width: 100%;
+        height: auto;
+
+        right: 0;
+        bottom: -35px;
+        position: absolute;
+    }
+
+    &__blockBlue {
+        width: 100%;
+        height: 354px;
+
+        padding: 37px 42px;
+
+        border-radius: 50px;
+        background: #69AEFF;
+
+        p {
+            font-family: 'Srbija-Sans';
+            font-size: 48px;
+        }
+    }
+
+    &__blockBlue {
+        position: relative;
+
+        p {
+            font-family: 'Srbija-Sans';
+            font-size: 48px;
+            color: #FFFFFF;
+        }
+    }
+
+    &__conditioner {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        padding: 0 80px;
+
+        top: 260px;
+        left: 0;
+    }
+
+    &__lastBlock {
+        margin-top: 360px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 25px 25px 50px 50px;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    &__descr {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        padding: 50px 56px;
+        border-radius: 0px 0px 50px 50px;
+
+        p {
+            font-size: 16px;
+            font-family: 'PTSans-Bold';
+        }
+
+        &:first-child {
+            box-shadow: none;
+            border-radius: 25px 25px 0px 0px;
+        }
+    }
+
+    &__descrCircle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;  
+        left: 50%; 
+        background: #FFFFFF;
+
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,47 @@
+.subHeader {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__seeAll {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        height: fit-content;
+
+        img {
+            width: 16.68px;
+            height: 8.36px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .subHeader {
+        margin-top: 40px;
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .subHeader {
+        margin-top: 20px;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}

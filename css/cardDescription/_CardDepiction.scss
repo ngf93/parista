@@ -1,0 +1,15 @@
+.Card {
+    &__description {
+        display: none;
+        margin-top: 32px;
+        margin-bottom: 40px;
+
+        width: 100%;
+        min-height: 555px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+
+        padding: 88px 62px;
+        line-height: 21px;
+    }
+}

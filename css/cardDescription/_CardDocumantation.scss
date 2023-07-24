@@ -1,0 +1,30 @@
+.Card {
+    &__docs {
+        width: 100%;
+        height: auto;
+
+        padding: 50px 56px;
+        margin-top: 60px;
+
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+
+        margin-bottom: 40px;
+    }
+
+    &__docElement {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        img {
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
