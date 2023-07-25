@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @import 'fonts';
 @import 'header';
@@ -41,6 +41,7 @@ $light-blue: #F2FBFF;
 $blue: #305DE9;
 $violet: #C894C4;
 $violet2: #BD89B9;
+$red: #F04438;
 $white: #fff;
 $light-gray: #E3EBEF;
 $gray: #B6B6B6;
@@ -154,6 +155,12 @@ h6 {
     font-weight: 700;
     text-align: left;
 }
+.title-font {font-family: $title-font;}
+.ruble {
+    font-family: 'Nunito Sans';
+    line-height: 100%;
+    font-size: .95em;
+}
 .fs {
     &-08 {font-size: 0.8em;}
     &-09 {font-size: 0.9em;}
@@ -193,8 +200,8 @@ button {
     font-family: inherit;
     outline: none;
     color: inherit;
-  }
-  .btn {
+}
+.btn {
     @include flex(row, center, center, nowrap);
     padding: .55em 1.1em;
     text-align: center;
@@ -214,11 +221,31 @@ button {
         border: 1px solid $blue;
       }
     }
+    &-icon {
+        font-size: 2em;
+        svg {
+            path {
+                transition: $transition;
+                stroke: $icon-color;
+                fill: transparent;
+            }
+        }
+        &.active {
+            svg {
+                path {
+                    stroke: $sky;
+                    fill: $sky;
+                }
+            }
+        }
+    }
 }
 
 /***** Main ***********/
-.container {
-    max-width: 1240px;
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1240px;
+    }
 }
 .mb-6 {
     margin-bottom: 6em;
@@ -530,4 +557,73 @@ body {
     background: url(../img/bg/BG.jpg) no-repeat center;
     background-size: cover;
     padding: 3em 0px;
+}
+
+.product-card {
+    width: 100%;
+    position: relative;
+    padding: .7em;
+    border-radius: .7em;
+    background-color: $white;
+    @include safariFix();
+    transition: $transition;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05);
+    &:hover {
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    }
+    &-img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 160px;
+        object-fit: scale-down;
+        margin-bottom: 1em;
+    }
+    &-characteristics {
+        @include list();
+        font-size: .8em;
+        margin-bottom: 1em;
+        li {
+            @include flex(row, space-between, baseline, nowrap);
+            margin-bottom: .5em;
+            background-image: url(../img/bg/dot.svg);
+            background-repeat: repeat-x;
+            background-position: 50% 85%;
+            span {
+                background-color: $white;
+                &:last-child {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    &-price {
+        position: relative;
+        @include flex(column, flex-end, flex-start, nowrap);
+        font-family: $title-font;
+        .current {
+            font-size: 1.2em;
+        }
+        .old {
+            color: $gray;
+            text-decoration: line-through;
+            font-size: .9em;
+            position: absolute;
+            top: 0.5em;
+            right: -.75em;
+            line-height: 100%;
+        }
+    }
+    &-sale {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        color: $white;
+        background-color: rgba($color: $red, $alpha: 0.9);
+        font-weight: 700;
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+        @include flex();
+    }
 }
