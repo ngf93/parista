@@ -220,6 +220,9 @@ button {
 .container {
     max-width: 1240px;
 }
+.mb-6 {
+    margin-bottom: 6em;
+}
 hr {
     margin: 0;
 }
@@ -233,6 +236,40 @@ hr {
 
 .active {
     display: block !important;
+}
+
+.swiper {
+    padding-bottom: 4em;
+    &-button {
+        position: absolute;
+        top: unset;
+        margin: 0px;
+        bottom: 0px;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background-color: $sky;
+        color: $white;
+        transition: $transition;
+        &:hover, &:focus, &:active {
+            background-color: $blue;
+            color: $white;
+        }
+        &::after {
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        &-prev {
+            @extend .swiper-button;
+            right: 4em;
+            left: unset;
+        }
+        &-next {
+            @extend .swiper-button;
+            right: 0px;
+            left: unset;
+        }
+    } 
 }
 
 body {
@@ -487,4 +524,10 @@ body {
             }
         }
     }
+}
+
+.sec-quiz {
+    background: url(../img/bg/BG.jpg) no-repeat center;
+    background-size: cover;
+    padding: 3em 0px;
 }
