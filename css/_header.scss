@@ -37,12 +37,9 @@
     &__button {
         background-color: #69AEFF;
         color: #FFFFFF;
-        
         padding: 8.5px 17px;
         border-radius: 7px;
-
         font-size: 16px;
-        font-family: 'PTSans-Bold';
     }
 }
 
@@ -88,7 +85,6 @@
         outline: none;
         border: none;
         border-radius: 10px 0px 0px 10px;
-        font-family: 'PTSans-Regular';
 
         width: 100%;
         padding-left: 170px;
@@ -188,7 +184,6 @@
     }
 
     &__description {
-        font-family: 'PTSans-Regular';
         font-size: 12px;
     }
 
@@ -212,7 +207,7 @@
             margin-right: 1px;
 
             width: fit-content;
-            font-family: 'PTSans-Bold';
+            font-weight: 700;
             font-size: 11px;
             color: #FFFFFF;
         }
@@ -272,7 +267,7 @@
 
     h4 {
         font-size: 24px;
-        font-family: 'PTSans-Bold';
+        font-weight: 700;
         color: #373737;
     }
 
