@@ -5175,6 +5175,7 @@ h2 {
 
 h3 {
   font-size: 2em;
+  margin-bottom: 0.75em;
   text-align: left;
 }
 
@@ -5689,12 +5690,6 @@ body {
   z-index: 2;
 }
 
-.sec-quiz {
-  background: url(../img/bg/BG.jpg) no-repeat center;
-  background-size: cover;
-  padding: 3em 0px;
-}
-
 .product-card {
   width: 100%;
   position: relative;
@@ -5779,4 +5774,31 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+}
+
+.sec-quiz {
+  background: url(../img/bg/BG.jpg) no-repeat center;
+  background-size: cover;
+  padding: 3em 0px;
+}
+.sec-quiz .box {
+  background-color: #fff;
+  border-radius: 2em;
+  padding: 3em;
+}
+.sec-quiz .carousel-control, .sec-quiz .carousel-control-prev, .sec-quiz .carousel-control-next {
+  opacity: 1;
+  position: relative;
+  color: #69AEFF;
+  background-color: #fff;
+  border: 1px solid #69AEFF;
+  padding: 0.75em 1em;
+  font-weight: 700;
+  font-size: 0.9em;
+  border-radius: 0.45em;
+  transition: 300ms ease-in;
+}
+.sec-quiz .carousel-control:hover, .sec-quiz .carousel-control-prev:hover, .sec-quiz .carousel-control-next:hover {
+  background-color: #69AEFF;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

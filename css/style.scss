@@ -140,6 +140,7 @@ h2 {
 }
 h3 {
     font-size: 2em;
+    margin-bottom: .75em;
     text-align: left;
 }
 h4 {
@@ -553,11 +554,6 @@ body {
     }
 }
 
-.sec-quiz {
-    background: url(../img/bg/BG.jpg) no-repeat center;
-    background-size: cover;
-    padding: 3em 0px;
-}
 
 .product-card {
     width: 100%;
@@ -625,5 +621,41 @@ body {
         height: 2.5em;
         border-radius: 50%;
         @include flex();
+    }
+}
+
+
+.sec-quiz {
+    background: url(../img/bg/BG.jpg) no-repeat center;
+    background-size: cover;
+    padding: 3em 0px;
+    .box {
+        background-color: $white;
+        border-radius: 2em;
+        padding: 3em;
+    }
+    .carousel {
+        &-control {
+            opacity: 1;
+            position: relative;
+            color: $sky;
+            background-color: $white;
+            border: 1px solid $sky;
+            padding: 0.75em 1em;
+            font-weight: 700;
+            font-size: .9em;
+            border-radius: $radius;
+            transition: $transition;
+            &:hover {
+                background-color: $sky;
+                color: $white;
+            }
+            &-next {
+                @extend .carousel-control;
+            }
+            &-prev {
+                @extend .carousel-control;
+            }
+        }
     }
 }
