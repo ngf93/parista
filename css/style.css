@@ -3927,94 +3927,6 @@
   margin-top: 80px;
 }
 
-.blackColor {
-  color: #373737;
-}
-
-.Conditioners {
-  margin-top: 22px;
-  margin-bottom: 40px;
-}
-.Conditioners__items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-row-gap: 32px;
-  grid-column-gap: 32px;
-}
-.Conditioners__item {
-  background: #FFFFFF;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  max-width: 280px;
-  width: 100%;
-  height: 220px;
-  text-align: center;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: filter 0.2s;
-  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0));
-}
-.Conditioners__item p {
-  font-family: "PTSans-Bold";
-  color: #373737;
-  font-size: 24px;
-  margin-top: 170px;
-}
-.Conditioners__item:hover {
-  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.05));
-}
-.Conditioners__elements {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap: 32px;
-  grid-column-gap: 80px;
-}
-.Conditioners__element {
-  background: #FFFFFF;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 25px;
-  max-width: 412px;
-  width: 100%;
-  height: 324px;
-  text-align: center;
-}
-.Conditioners__element p {
-  font-family: "PTSans-Bold";
-  color: #373737;
-  font-size: 24px;
-  margin-top: 250px;
-}
-.Conditioners__onWall {
-  background-image: url("../img/ConditionerOnWall.png");
-}
-.Conditioners__cassette {
-  background-image: url("../img/ConditionersCassette.png");
-}
-.Conditioners__cannals {
-  background-image: url("../img/ConditionersCannals.png");
-}
-.Conditioners__column {
-  background-image: url("../img/ConditionersColumn.png");
-}
-.Conditioners__floorCeil {
-  background-image: url("../img/ConditionersFloorCeil.png");
-}
-.Conditioners__multi {
-  background-image: url("../img/ConditionersMulti.png");
-}
-.Conditioners__mobile {
-  background-image: url("../img/ConditionersMobile.png");
-}
-.Conditioners__airCleaners {
-  background-image: url("../img/ConditionersAirCleaners.png");
-}
-.Conditioners__humidifiers {
-  background-image: url("../img/ConditionersHumidifiers.png");
-}
-
 .User {
   width: 100%;
   height: auto;
@@ -5171,6 +5083,7 @@ h1 {
 
 h2 {
   font-size: 2.5em;
+  margin-bottom: 0.5em;
 }
 
 h3 {
@@ -5937,4 +5850,74 @@ body {
 .progress-bar {
   background-color: #69AEFF;
   border-radius: 3px;
+}
+
+.Conditioners {
+  margin-top: 22px;
+  margin-bottom: 40px;
+}
+.Conditioners__item {
+  background: #FFFFFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 220px;
+  text-align: center;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: filter 0.2s;
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0));
+}
+.Conditioners__item p {
+  font-size: 1.5em;
+}
+.Conditioners__item:hover {
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.05));
+}
+.Conditioners__elements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 32px;
+  grid-column-gap: 80px;
+}
+.Conditioners__element {
+  background: #FFFFFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  width: 100%;
+  height: 324px;
+  text-align: center;
+}
+.Conditioners__element p {
+  font-size: 1.5em;
+}
+.Conditioners__onWall {
+  background-image: url("../img/ConditionerOnWall.png");
+}
+.Conditioners__cassette {
+  background-image: url("../img/ConditionersCassette.png");
+}
+.Conditioners__cannals {
+  background-image: url("../img/ConditionersCannals.png");
+}
+.Conditioners__column {
+  background-image: url("../img/ConditionersColumn.png");
+}
+.Conditioners__floorCeil {
+  background-image: url("../img/ConditionersFloorCeil.png");
+}
+.Conditioners__multi {
+  background-image: url("../img/ConditionersMulti.png");
+}
+.Conditioners__mobile {
+  background-image: url("../img/ConditionersMobile.png");
+}
+.Conditioners__airCleaners {
+  background-image: url("../img/ConditionersAirCleaners.png");
+}
+.Conditioners__humidifiers {
+  background-image: url("../img/ConditionersHumidifiers.png");
 }/*# sourceMappingURL=style.css.map */
