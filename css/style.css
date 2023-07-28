@@ -5565,10 +5565,13 @@ body {
   }
 }
 
+main {
+  padding-top: 1.5em;
+}
+
 header {
   position: relative;
   padding-top: 1em;
-  margin-bottom: 1.5em;
 }
 
 header .topMenu ul {
