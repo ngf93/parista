@@ -1012,7 +1012,7 @@ header {
 .product-page {
     --img-h: 350px;
     position: relative;
-    padding: 3em;
+    padding: 3em 0em;
     &-bg {
         background-color: #69AEFF;
         background-image: url(../img/cartBg.png), linear-gradient(270deg, #69AEFF 0%, rgba(182, 88, 207, 1.00) 48.96%, rgba(255, 159, 105, 0.99) 100%);
@@ -1054,6 +1054,68 @@ header {
             width: 100%;
             height: 100%;
             object-fit: scale-down;
+        }
+    }
+    .product-card-characteristics {
+        font-size: 1em;
+        li {
+            margin-bottom: 1em;
+        }
+    }
+}
+.docs-list {
+    @include list();
+    li {
+        &:not(:last-child){
+            margin-bottom: 2em;
+        }
+        a {
+            @include flex(row, flex-start, center, nowrap);
+            transition: $transition;
+            &:hover, &:after, &:active {
+                color: $sky;
+            }
+            img {
+                width: 3em;
+                height: 3em;
+                object-fit: contain;
+                margin-right: 1em;
+            }
+        }
+    }
+}
+.tabs {
+    @include list();
+    @include flex(row, center, center, nowrap);
+    border: none;
+    margin-bottom: 1.5em;
+    li {
+        a, button {
+            color: $dark-gray;
+            padding: 1em 2em;
+            display: block;
+            position: relative;
+            transition: $transition;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                background-color: $sky;
+                width: 3em;
+                height: 2px;
+                border-radius: 1px;
+                transform: translateX(-50%) scale(0);
+                transition: $transition;
+            }
+            &.active {
+                &::after {
+                    transform: translateX(-50%) scale(1);
+                }
+            }
+            &:hover, &:focus {
+                color: $sky;
+            }
         }
     }
 }
