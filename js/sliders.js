@@ -81,3 +81,23 @@ const swiper3 = new Swiper('.swiper-3', {
     }
   }
 });
+
+var swiper4 = new Swiper(".swiper-thumbs", {
+  direction: 'vertical',
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper5 = new Swiper(".swiper-main", {
+  loop: true,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper4,
+  },
+});

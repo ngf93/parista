@@ -224,6 +224,7 @@ h6 {
 .gray {color: $gray;}
 .sky {color: $sky;}
 .red {color: $red;}
+.green {color: $green2;}
 
 .link {
     color: $dark-gray;
@@ -322,12 +323,21 @@ button {
         }
       }
     &-icon {
+        @include flex();
         font-size: 2em;
         svg {
             path {
                 transition: $transition;
                 stroke: $icon-color;
                 fill: transparent;
+            }
+        }
+        &:hover, &:focus {
+            svg {
+                path {
+                    stroke: $sky;
+                    fill: transparent;
+                }
             }
         }
         &.active {
@@ -929,7 +939,7 @@ header {
     }
 }
 
-
+/* Product */
 .product-card {
     width: 100%;
     position: relative;
@@ -999,7 +1009,55 @@ header {
         @include flex();
     }
 }
+.product-page {
+    --img-h: 350px;
+    position: relative;
+    padding: 3em;
+    &-bg {
+        background-color: #69AEFF;
+        background-image: url(../img/cartBg.png), linear-gradient(270deg, #69AEFF 0%, rgba(182, 88, 207, 1.00) 48.96%, rgba(255, 159, 105, 0.99) 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: overlay, normal;
+        @include absBG(0, 0px, 380px);
+        background-position: center top;
+    }
+    .box {
+        background-color: $white;
+        border-radius: 1.5em;
+        padding: 2.5em;
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.10));
+    }
+    .breadcrumbs, h1, .code {
+        color: $white;
+    }
+    .sliders-wrap {
+        @include flex(row, flex-start, flex-start, nowrap);
 
+    }
+    .swiper-thumbs {
+        height: var(--img-h);
+        width: 130px;
+        padding-bottom: 0px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+        }
+    }
+    .swiper-main {
+        flex: 1;
+        height: var(--img-h);
+        width: 100%;
+        padding-bottom: 0px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+        }
+    }
+}
+/* Product End */
 
 .sec-quiz {
     background: url(../img/bg/BG.jpg) no-repeat center;
