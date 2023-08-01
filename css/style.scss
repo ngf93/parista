@@ -1618,3 +1618,30 @@ header {
         margin-bottom: 1em;
     }
 }
+
+.sec-about-1 {
+    position: relative;
+    .box {
+        position: relative;
+        z-index: 1;
+        @media (max-width: $bp-xl) {
+            padding-bottom: 0px;
+        }
+    }
+    &-img {
+        position: absolute;
+        z-index: 2;
+        bottom: 0px;
+        right: 0px;
+        height: 110%;
+        @media (max-width: $bp-xl) {
+            position: relative;
+            bottom: unset;
+            right: unset;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            margin: 1em auto 0px;
+        }
+    }
+}
