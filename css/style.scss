@@ -116,7 +116,12 @@ $bp-xxl: 1399.98px;
     border-radius: $rad;
     object-fit: $fit;
 }
-
+@mixin box {
+    background-color: $white;
+    padding: 3em;
+    border-radius: 1.5em;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+}
 
 /* Typography */
 a, a:hover, a:focus, a:active {
@@ -229,6 +234,7 @@ h6 {
 .link {
     color: $dark-gray;
     transition: $transition;
+    &.white {color: $white;}
     &:hover, &:focus {
         color: $sky;
     }
@@ -365,9 +371,18 @@ label {
 }
 .mb-6 {
     margin-bottom: 6em;
+    @media (max-width: 767px) {
+        margin-bottom: 4em;
+    }
 }
 hr {margin: 0;}
-
+.box {
+    @include box();
+    @media (max-width: 767px) {
+        padding: 1.5em;
+        border-radius: 1em;
+    }
+}
 .swiper {
     padding-bottom: 4em;
     &-button {
@@ -646,6 +661,19 @@ body {
 
 main {
     padding-top: 3em;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+    @include safariFix();
+    .bgTop {
+        @include absBG(-1, 0px, 400px);
+        &.darken {filter: brightness(0.8);}
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
 
 header {
@@ -1581,5 +1609,12 @@ header {
                 }
             }
         }
+    }
+}
+
+.sec-politics {
+    h6 {margin-top: 1.5em;}
+    h6, p {
+        margin-bottom: 1em;
     }
 }
