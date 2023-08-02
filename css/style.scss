@@ -126,6 +126,21 @@ $bp-xxl: 1399.98px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.10));
 }
 
+:root {
+    --h-height: 195px;
+    --f-height: 410px;
+    @media (max-width: $bp-lg) {
+        --h-height: 137px;
+    }
+    @media (max-width: $bp-md) {
+        --h-height: 135px;
+    }
+    @media (max-width: $bp-sm) {
+        --h-height: 133px;
+        --f-height: 330px;
+    }
+}
+
 /* Typography */
 a, a:hover, a:focus, a:active {
     color: inherit;
@@ -386,6 +401,13 @@ hr {margin: 0;}
         border-radius: 1em;
     }
 }
+.xs-noBox {
+    @media (max-width: $bp-sm) {
+        padding: 0px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+}
 .swiper {
     padding-bottom: 4em;
     &-button {
@@ -421,7 +443,19 @@ hr {margin: 0;}
         }
     } 
 }
-
+.table {
+    tr {
+        td {
+            padding: 1em 1.5em;
+            @media (max-width: $bp-sm) { 
+                padding: .75em 1em;
+            }
+            &:first-child {
+                color: $gray;
+            }
+        }
+    }
+}
 nav.breadcrumbs {
     margin-bottom: 2em;
     ol {
@@ -668,6 +702,7 @@ main {
     background-color: transparent;
     overflow: hidden;
     @include safariFix();
+    min-height: calc(100vh - var(--h-height) - var(--f-height));
     .bgTop {
         @include absBG(-1, 0px, 400px);
         &.darken {filter: brightness(0.8);}
@@ -839,6 +874,9 @@ header {
     "area7 area7 area7 area7 area8 area8";
     gap: 2em;
     overflow: hidden;
+    &.cut {
+        grid-template-rows: var(--h1);
+    }
     @media (max-width: $bp-xxl) {
         gap: 1.5em;
     }
@@ -861,6 +899,9 @@ header {
         "area6 area6 area6 area6 area6 area6 area6 area6"
         "area7 area7 area7 area7 area7 area8 area8 area8";
         font-size: .8em;
+        &.cut {
+            grid-template-rows: var(--h1) var(--h2);
+        }
     }
     @media (max-width: $bp-md) {
         --h1: 135px;
@@ -876,7 +917,9 @@ header {
         --h4: 23vw;
         gap: 1.5em;
     }
+    
     &-item {
+        position: relative;
         border-radius: $radius*2;
         padding: 1em;
         h2, h3 {
@@ -1696,6 +1739,25 @@ header {
                 z-index: 1;
                 width: 3em;
             }
+        }
+    }
+}
+
+.sec-notFound {
+    background-color: $light-sky;
+    background-image: url(../img/bg/bg404.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding: 3em 0px;
+    @include shadow();
+    h1 {
+        font-size: 4em;
+        @media (max-width: $bp-lg) {
+            font-size: 3em;
+        }
+        @media (max-width: $bp-sm) {
+            font-size: 2em;
         }
     }
 }

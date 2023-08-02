@@ -4957,6 +4957,30 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 /* mixins */
+:root {
+  --h-height: 195px;
+  --f-height: 410px;
+}
+
+@media (max-width: 991.98px) {
+  :root {
+    --h-height: 137px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --h-height: 135px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --h-height: 133px;
+    --f-height: 330px;
+  }
+}
+
 /* Typography */
 a, a:hover, a:focus, a:active {
   color: inherit;
@@ -5427,6 +5451,15 @@ hr {
   }
 }
 
+@media (max-width: 575.98px) {
+  .xs-noBox {
+    padding: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 .swiper {
   padding-bottom: 4em;
 }
@@ -5479,6 +5512,20 @@ hr {
 .swiper-button-next {
   right: 0px;
   left: unset;
+}
+
+.table tr td {
+  padding: 1em 1.5em;
+}
+
+@media (max-width: 575.98px) {
+  .table tr td {
+    padding: .75em 1em;
+  }
+}
+
+.table tr td:first-child {
+  color: #B6B6B6;
 }
 
 nav.breadcrumbs {
@@ -5813,6 +5860,7 @@ main {
   isolation: isolate;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
+  min-height: calc(100vh - var(--h-height) - var(--f-height));
 }
 
 main .bgTop {
@@ -6133,6 +6181,11 @@ header .hoverMenu {
   overflow: hidden;
 }
 
+.main-tiles.cut {
+  -ms-grid-rows: var(--h1);
+      grid-template-rows: var(--h1);
+}
+
 @media (max-width: 1399.98px) {
   .main-tiles {
     gap: 1.5em;
@@ -6161,6 +6214,10 @@ header .hoverMenu {
         grid-template-areas: "area1 area1 area1 area1 area2 area2 area2 area2" "area4 area4 area3 area3 area3 area3 area5 area5" "area6 area6 area6 area6 area6 area6 area6 area6" "area7 area7 area7 area7 area7 area8 area8 area8";
     font-size: .8em;
   }
+  .main-tiles.cut {
+    -ms-grid-rows: var(--h1) var(--h2);
+        grid-template-rows: var(--h1) var(--h2);
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -6184,6 +6241,7 @@ header .hoverMenu {
 }
 
 .main-tiles-item {
+  position: relative;
   border-radius: 0.9em;
   padding: 1em;
 }
@@ -7573,5 +7631,32 @@ header .hoverMenu {
           transform: translate(-50%, -50%);
   z-index: 1;
   width: 3em;
+}
+
+.sec-notFound {
+  background-color: #F6FAFF;
+  background-image: url(../img/bg/bg404.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  padding: 3em 0px;
+  -webkit-filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+}
+
+.sec-notFound h1 {
+  font-size: 4em;
+}
+
+@media (max-width: 991.98px) {
+  .sec-notFound h1 {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sec-notFound h1 {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
