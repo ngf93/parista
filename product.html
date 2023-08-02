@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parista</title>
+    <title>Parista - Товар</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -267,26 +267,62 @@
               </div>
               <div class="mt-4 row row-cols-4 gx-2">
                 <div>
-                  <img src="img/manafactureOption2.png" class="img-fluid" alt="manafactureOption2">
+                  <img src="img/manafactureOption2.png" class="feature" alt="manafactureOption2">
                 </div>
                 <div>
-                  <img src="img/manafactureOption2.png" class="img-fluid" alt="manafactureOption2">
+                  <div class="feature">особенность</div>
                 </div>
                 <div>
-                  <img src="img/manafactureOption2.png" class="img-fluid" alt="manafactureOption2">
+                  <div class="feature">особенность</div>
                 </div>
                 <div>
-                  <img src="img/manafactureOption2.png" class="img-fluid" alt="manafactureOption2">
+                  <div class="feature">особенность</div>
                 </div>
               </div>
             </div>
             <div>
-              <div class="d-flex justify-content-between align-items-center mb-4">
+              <div class="d-flex justify-content-between align-items-start mb-4">
                 <div>
-                  <p>Площадь помещения, М2</p>
+                  <p class="mb-2">Площадь помещения, М2</p>
+                  <ul class="list-unstyled d-flex">
+                    <li class="me-2">
+                      <label>
+                        <input type="radio" name="area" hidden>
+                        <div class="pill">20</div>
+                      </label>
+                    </li>
+                    <li class="me-2">
+                      <label>
+                        <input type="radio" checked name="area" hidden>
+                        <div class="pill">25</div>
+                      </label>
+                    </li>
+                    <li class="me-2">
+                      <label>
+                        <input type="radio" name="area" hidden>
+                        <div class="pill">35</div>
+                      </label>
+                    </li>
+                    <li class="me-2">
+                      <label>
+                        <input type="radio" name="area" hidden>
+                        <div class="pill">50</div>
+                      </label>
+                    </li>
+                    <li class="me-2">
+                      <label>
+                        <input type="radio" name="area" hidden>
+                        <div class="pill">70</div>
+                      </label>
+                    </li>
+                  </ul>
                 </div>
                 <div>
-                  <p class="text-end text-decoration-underline">Стоимость монтажных услуг</p>
+                  <p class="text-end text-decoration-underline mb-2">Стоимость монтажных услуг</p>
+                  <label class="justify-content-end">
+                    <input type="checkbox" class="fs-14">
+                    <p class="ms-2">Монтаж <strong class="sky">2400₽</strong></p>
+                  </label>
                 </div>
               </div>
 
@@ -338,191 +374,380 @@
             </div>
           </div>
         </div>
-<!-- 
-        <div class="box mb-4">
-          <h3>Дополнительные услуги</h3>
-          <form action="">
-            <ul>
-              <li>
-                <label for="">
-
-                </label>
-              </li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </form>
-        </div> -->
 
         <div class="box mb-4">
           <div class="row">
-            <div class="col-5">
-              <h3 class="mb-0">Получить консультацию</h3>
-            </div>
-            <div class="col-7">
-              <form action="">
-                <div class="row row-cols-3">
-                  <div>
-                    <input type="text" placeholder="Введите имя">
-                  </div>
-                  <div>
-                    <input type="tel" placeholder="Введите номер телефона">
-                  </div>
-                  <div>
-                    <button type="submit" class="btn-1 w-100">Отправить</button>
-                  </div>
-                </div>
+            <div class="col-12 col-lg-9 col-xl-7">
+              <h3>Дополнительные услуги</h3>
+              <form action="" class="form-extraServices">
+                <ul>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="extraServices">
+                      <div class="text">
+                        <span class="name">Козырек</span>
+                        <span class="price">+2&nbsp;813&nbsp;₽</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="extraServices">
+                      <div class="text">
+                        <span class="name">Зимний комплект</span>
+                        <span class="price">+9&nbsp;375&nbsp;₽</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="extraServices">
+                      <div class="text">
+                        <span class="name">Виброопоры с установкой</span>
+                        <span class="price">+2&nbsp;000&nbsp;₽</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="extraServices">
+                      <div class="text">
+                        <span class="name">Антивандальная решетка</span>
+                        <span class="price">+4&nbsp;688&nbsp;₽</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li></li>
+                </ul>
               </form>
             </div>
           </div>
-          
         </div>
 
-        <ul class="tabs" id="productTabs" role="tablist">
-          <li role="presentation">
-            <button class="active" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab"aria-selected="true">Описание</button>
-          </li>
-          <li  role="presentation">
-            <button data-bs-toggle="tab" data-bs-target="#specifications" type="button" role="tab" aria-selected="false">Характеристики</button>
-          </li>
-          <li  role="presentation">
-            <button data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-selected="false">Отзывы</button>
-          </li>
-          <li  role="presentation">
-            <button data-bs-toggle="tab" data-bs-target="#faq" type="button" role="tab" aria-selected="false">Вопрос-ответ</button>
-          </li>
-          <li  role="presentation">
-            <button  data-bs-toggle="tab" data-bs-target="#docs" type="button" role="tab" aria-selected="false">Документация</button>
-          </li>
-        </ul>
-        <div class="tab-content" id="productTabsContent">
-          <!-- Tab #1 - Description -->
-          <div class="tab-pane fade show active" id="description" role="tabpanel" tabindex="0">
-            <div class="box">
-              <p>Бытовой кондиционер Axioma ASX07J1/ASB07J1 (Аксиома). Классическая сплит-система Axioma, серия J, рассчитана на работу в пределах от 20 до 70 кв.м. Серия кондиционеров J отлично сочетается в себе с современным дизайном, высокой надежностью и привлекательностью. Простота управления обеспечивает комфортное использование сплит-системы. Внутренний блок этой серии отличается стильным и современным дизайном, корпус изготовлен из качественного белого пластика с выделением лунного дисплея. Благодаря особому фильтру с ионами серебра кондиционер нейтрализует действие аллергенов и раздражителей. Ионизатор воспринимает поток отрицательно заряженных ионов, который положительно изменился на самочувствие людей, нормальный и здоровый воздух. Особые предложения моделей Axioma ASX07J1/ASB07J1 серии J: малошумный, с долгим сроком эксплуатации; регулирование воздушного потока, при котором воздух направляется горизонтально при охлаждении и вертикально при обогреве, а Режим TURBO обеспечивает достижение желаемой температуры в кратчайшее время; кондиционер Axioma имеет особый режим комфортного сна, при температуре которого автоматически возникает для большего уюта спящего человека; антикоррозионная защита наружного блока. Специальное покрытие теплообменников наружного блока от потерь, что повышает энергоэффективность, а также увеличивает срок службы оборудования; встроенный фильтр с ионами серебра, очищающий воздух от бактерий, пыли, пыли и других неприятных запахов. Нейтрализует действие аллергенов и ожиданий; расширенная гарантия – 3 года; обнаружение утечки хладагента; авторестарт. управление по wi-fi (опция). При подключении контроллера DW11-B, DW21-B используются доступные преимущества: возможность управления климатом в доме из любой точки мира; персонализированные приложения, которые являются приложением Daichi Comfort, основанным на вашем опыте использования; установка таймеров, расписаний; включение/отключение при приближении и удалении от дома на основе данных о геолокации; управление голосовым помощником; одно мобильное приложение может контролировать все помещения. В комплекте: Внешний блок, внутренний блок, пульт управления. Бытовой модели кондиционера на 20м2 Axioma ASX07J1/ASB07J1 оснащен всеми функциями, обязательно должен обладать любой современным кондиционером. Он отлично подходит для квартиры, студии, комнаты или другого доступного помещения. Готов для использования не только в летнюю жару, но и на обогрев квартир в межсезонье.</p>
+        <div class="d-flex flex-column">
+          <!-- Form Consultation -->
+          <div class="order-3 order-md-1 box mt-4 mt-md-0 mb-md-4">
+            <div class="row">
+              <div class="col-12 col-xl-5">
+                <h3 class="mb-xl-0">Получить консультацию</h3>
+              </div>
+              <div class="col-12 col-xl-7">
+                <form action="">
+                  <div class="row row-cols-1 row-cols-md-3 g-3 g-lg-4">
+                    <div>
+                      <input type="text" placeholder="Введите имя">
+                    </div>
+                    <div>
+                      <input type="tel" placeholder="Введите номер телефона">
+                    </div>
+                    <div>
+                      <button type="submit" class="btn-1 w-100">Отправить</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-          <!-- Tab #2 - Specifications -->
-          <div class="tab-pane fade" id="specifications" role="tabpanel" tabindex="0">
+          <!-- Form Consultation END -->
 
-            <div class="box mb-4">
-              <h3>Основные характеристики</h3>
-              <ul class="product-card-characteristics">
-                <li>
-                  <span>Площадь</span>
-                  <span>20 Кв.м</span>
-                </li>
-                <li>
-                  <span>Инвертор</span>
-                  <span>Нет</span>
-                </li>
-                <li>
-                  <span>Уровень шума</span>
-                  <span>24 ДБ</span>
-                </li>
-                <li>
-                  <span>Площадь</span>
-                  <span>20 Кв.м</span>
-                </li>
-                <li>
-                  <span>Инвертор</span>
-                  <span>Нет</span>
-                </li>
-                <li>
-                  <span>Уровень шума</span>
-                  <span>24 ДБ</span>
-                </li>
-              </ul>
+          <!-- Tabs -->
+          <ul class="order-1 order-md-2 tabs" id="productTabs" role="tablist">
+            <li role="presentation">
+              <button class="active" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab"aria-selected="true">Описание</button>
+            </li>
+            <li  role="presentation">
+              <button data-bs-toggle="tab" data-bs-target="#specifications" type="button" role="tab" aria-selected="false">Характеристики</button>
+            </li>
+            <li  role="presentation">
+              <button data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-selected="false">Отзывы</button>
+            </li>
+            <li  role="presentation">
+              <button data-bs-toggle="tab" data-bs-target="#faq" type="button" role="tab" aria-selected="false">Вопрос-ответ</button>
+            </li>
+            <li  role="presentation">
+              <button  data-bs-toggle="tab" data-bs-target="#docs" type="button" role="tab" aria-selected="false">Документация</button>
+            </li>
+          </ul>
+          <div class="order-2 order-md-3 tab-content" id="productTabsContent">
+            <!-- Tab #1 - Description -->
+            <div class="tab-pane fade show active" id="description" role="tabpanel" tabindex="0">
+              <div class="box">
+                <p>Бытовой кондиционер Axioma ASX07J1/ASB07J1 (Аксиома). Классическая сплит-система Axioma, серия J, рассчитана на работу в пределах от 20 до 70 кв.м. Серия кондиционеров J отлично сочетается в себе с современным дизайном, высокой надежностью и привлекательностью. Простота управления обеспечивает комфортное использование сплит-системы. Внутренний блок этой серии отличается стильным и современным дизайном, корпус изготовлен из качественного белого пластика с выделением лунного дисплея. Благодаря особому фильтру с ионами серебра кондиционер нейтрализует действие аллергенов и раздражителей. Ионизатор воспринимает поток отрицательно заряженных ионов, который положительно изменился на самочувствие людей, нормальный и здоровый воздух. Особые предложения моделей Axioma ASX07J1/ASB07J1 серии J: малошумный, с долгим сроком эксплуатации; регулирование воздушного потока, при котором воздух направляется горизонтально при охлаждении и вертикально при обогреве, а Режим TURBO обеспечивает достижение желаемой температуры в кратчайшее время; кондиционер Axioma имеет особый режим комфортного сна, при температуре которого автоматически возникает для большего уюта спящего человека; антикоррозионная защита наружного блока. Специальное покрытие теплообменников наружного блока от потерь, что повышает энергоэффективность, а также увеличивает срок службы оборудования; встроенный фильтр с ионами серебра, очищающий воздух от бактерий, пыли, пыли и других неприятных запахов. Нейтрализует действие аллергенов и ожиданий; расширенная гарантия – 3 года; обнаружение утечки хладагента; авторестарт. управление по wi-fi (опция). При подключении контроллера DW11-B, DW21-B используются доступные преимущества: возможность управления климатом в доме из любой точки мира; персонализированные приложения, которые являются приложением Daichi Comfort, основанным на вашем опыте использования; установка таймеров, расписаний; включение/отключение при приближении и удалении от дома на основе данных о геолокации; управление голосовым помощником; одно мобильное приложение может контролировать все помещения. В комплекте: Внешний блок, внутренний блок, пульт управления. Бытовой модели кондиционера на 20м2 Axioma ASX07J1/ASB07J1 оснащен всеми функциями, обязательно должен обладать любой современным кондиционером. Он отлично подходит для квартиры, студии, комнаты или другого доступного помещения. Готов для использования не только в летнюю жару, но и на обогрев квартир в межсезонье.</p>
+              </div>
             </div>
 
-            <div class="box mb-4">
-              <h3>Производительность</h3>
-              <ul class="product-card-characteristics">
-                <li>
-                  <span>Площадь</span>
-                  <span>20 Кв.м</span>
-                </li>
-                <li>
-                  <span>Инвертор</span>
-                  <span>Нет</span>
-                </li>
-                <li>
-                  <span>Уровень шума</span>
-                  <span>24 ДБ</span>
-                </li>
-                <li>
-                  <span>Площадь</span>
-                  <span>20 Кв.м</span>
-                </li>
-                <li>
-                  <span>Инвертор</span>
-                  <span>Нет</span>
-                </li>
-                <li>
-                  <span>Уровень шума</span>
-                  <span>24 ДБ</span>
-                </li>
-              </ul>
+            <!-- Tab #2 - Specifications -->
+            <div class="tab-pane fade" id="specifications" role="tabpanel" tabindex="0">
+              <div class="box mb-4">
+                <h3>Основные характеристики</h3>
+                <ul class="product-card-characteristics">
+                  <li>
+                    <span>Площадь</span>
+                    <span>20 Кв.м</span>
+                  </li>
+                  <li>
+                    <span>Инвертор</span>
+                    <span>Нет</span>
+                  </li>
+                  <li>
+                    <span>Уровень шума</span>
+                    <span>24 ДБ</span>
+                  </li>
+                  <li>
+                    <span>Площадь</span>
+                    <span>20 Кв.м</span>
+                  </li>
+                  <li>
+                    <span>Инвертор</span>
+                    <span>Нет</span>
+                  </li>
+                  <li>
+                    <span>Уровень шума</span>
+                    <span>24 ДБ</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="box mb-4">
+                <h3>Производительность</h3>
+                <ul class="product-card-characteristics">
+                  <li>
+                    <span>Площадь</span>
+                    <span>20 Кв.м</span>
+                  </li>
+                  <li>
+                    <span>Инвертор</span>
+                    <span>Нет</span>
+                  </li>
+                  <li>
+                    <span>Уровень шума</span>
+                    <span>24 ДБ</span>
+                  </li>
+                  <li>
+                    <span>Площадь</span>
+                    <span>20 Кв.м</span>
+                  </li>
+                  <li>
+                    <span>Инвертор</span>
+                    <span>Нет</span>
+                  </li>
+                  <li>
+                    <span>Уровень шума</span>
+                    <span>24 ДБ</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="box mb-4">
+                <h3>Технические характеристики</h3>
+                <ul class="product-card-characteristics">
+                  <li>
+                    <span>Площадь</span>
+                    <span>20 Кв.м</span>
+                  </li>
+                  <li>
+                    <span>Инвертор</span>
+                    <span>Нет</span>
+                  </li>
+                  <li>
+                    <span>Уровень шума</span>
+                    <span>24 ДБ</span>
+                  </li>
+                  <li>
+                    <span>Площадь</span>
+                    <span>20 Кв.м</span>
+                  </li>
+                  <li>
+                    <span>Инвертор</span>
+                    <span>Нет</span>
+                  </li>
+                  <li>
+                    <span>Уровень шума</span>
+                    <span>24 ДБ</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="box mb-4">
-              <h3>Технические характеристики</h3>
-              <ul class="product-card-characteristics">
-                <li>
-                  <span>Площадь</span>
-                  <span>20 Кв.м</span>
-                </li>
-                <li>
-                  <span>Инвертор</span>
-                  <span>Нет</span>
-                </li>
-                <li>
-                  <span>Уровень шума</span>
-                  <span>24 ДБ</span>
-                </li>
-                <li>
-                  <span>Площадь</span>
-                  <span>20 Кв.м</span>
-                </li>
-                <li>
-                  <span>Инвертор</span>
-                  <span>Нет</span>
-                </li>
-                <li>
-                  <span>Уровень шума</span>
-                  <span>24 ДБ</span>
-                </li>
-              </ul>
+            <!-- Tab #3 - Reviews -->
+            <div class="tab-pane fade" id="reviews" role="tabpanel" tabindex="0">
+              <button type="button" class="btn-1 fs-15 mb-4">Оставить отзыв</button>
+              
+              <div class="box review">
+                <div class="review-user">
+                  <img src="img/guy.png" alt="guy">
+                  <div>
+                    <p>Иван</p>
+                    <time>4 мая 2022</time>
+                  </div>
+                </div>
+                <div class="review-rating">
+                  <img src="img/icon/starFilled.svg" alt="starFilled">
+                  <img src="img/icon/starFilled.svg" alt="starFilled">
+                  <img src="img/icon/starFilled.svg" alt="starFilled">
+                  <img src="img/icon/starFilled.svg" alt="starFilled">
+                  <img src="img/icon/star.svg" alt="star">
+                </div>
+
+                <div class="review-block">
+                  <h3>Достоинства</h3>
+                  <p>Хорошая цена и качество</p>
+                </div>
+
+                <div class="review-block">
+                  <h3>Недостатки</h3>
+                  <p>Нет</p>
+                </div>
+
+                <div class="review-block">
+                  <h3>Комментарий</h3>
+                  <p>Купил 3 месяца назад, пока работает исправно, за свою цену норм.</p>
+                </div>
+              </div>
+              
+              <div class="box review">
+                <div class="review-user">
+                  <img src="img/guy.png" alt="guy">
+                  <div>
+                    <p>Иван</p>
+                    <time>4 мая 2022</time>
+                  </div>
+                </div>
+                <div class="review-rating">
+                  <img src="img/icon/starFilled.svg" alt="starFilled">
+                  <img src="img/icon/starFilled.svg" alt="starFilled">
+                  <img src="img/icon/starFilled.svg" alt="starFilled">
+                  <img src="img/icon/starFilled.svg" alt="starFilled">
+                  <img src="img/icon/star.svg" alt="star">
+                </div>
+
+                <div class="review-block">
+                  <h3>Достоинства</h3>
+                  <p>Хорошая цена и качество</p>
+                </div>
+
+                <div class="review-block">
+                  <h3>Недостатки</h3>
+                  <p>Нет</p>
+                </div>
+
+                <div class="review-block">
+                  <h3>Комментарий</h3>
+                  <p>Купил 3 месяца назад, пока работает исправно, за свою цену норм.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab #4 - FAQ -->
+            <div class="tab-pane fade" id="faq" role="tabpanel" tabindex="0">
+              <button type="button" class="btn-1 fs-15 mb-4">Задать вопрос</button>
+              
+              <div class="box mb-5">
+                <div class="question">
+                  <div class="question-user">
+                    <img src="img/guy.png" alt="guy">
+                    <div>
+                      <p>Иван</p>
+                      <time>4 мая 2022</time>
+                    </div>
+                  </div>
+                  <p>Пульт с батарейками?</p>
+                  <button type="button" class="question-btn" onclick="toggleClass(this)">Ответить ...</button>
+                  <form action="" class="question-answerForm d-none">
+                    <textarea rows="4" placeholder="Написать комментарий..."></textarea>
+                    <div class="d-flex justify-content-end mt-3">
+                      <button type="reset" onclick="this.closest('form').classList.add('d-none')" class="btn-10 fs-15 px-5">Отменить</button>
+                      <button type="button" class="btn-1 fs-15 px-5 ms-4">Отправить</button>
+                    </div>
+                  </form>
+                  <div class="question-answer">
+                    <div class="question">
+                      <div class="question-user">
+                        <img src="img/guy.png" alt="guy">
+                        <div>
+                          <p>Владимир <span class="gray">(Эксперт)</span></p>
+                          <time>4 мая 2022</time>
+                        </div>
+                      </div>
+                      <p>Пульт с батарейками?</p>
+                      <button type="button" class="question-btn" onclick="toggleClass(this)">Ответить ...</button>
+                      <form action="" class="question-answerForm d-none">
+                        <textarea rows="4" placeholder="Написать комментарий..."></textarea>
+                        <div class="d-flex justify-content-end mt-3">
+                          <button type="reset" onclick="this.closest('form').classList.add('d-none')" class="btn-10 fs-15 px-5">Отменить</button>
+                          <button type="button" class="btn-1 fs-15 px-5 ms-4">Отправить</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="question">
+                  <div class="question-user">
+                    <img src="img/guy.png" alt="guy">
+                    <div>
+                      <p>Иван</p>
+                      <time>4 мая 2022</time>
+                    </div>
+                  </div>
+                  <p>Пульт с батарейками?</p>
+                  <button type="button" class="question-btn" onclick="toggleClass(this)">Ответить ...</button>
+                  <form action="" class="question-answerForm">
+                    <textarea rows="4" placeholder="Написать комментарий..."></textarea>
+                    <div class="d-flex justify-content-end mt-3">
+                      <button type="reset" onclick="this.closest('form').classList.add('d-none')" class="btn-10 fs-15 px-5">Отменить</button>
+                      <button type="button" class="btn-1 fs-15 px-5 ms-4">Отправить</button>
+                    </div>
+                  </form>
+                  <!-- <div class="question-answer">
+                    <div class="question">
+                      <div class="question-user">
+                        <img src="img/guy.png" alt="guy">
+                        <div>
+                          <p>Владимир <span class="gray">(Эксперт)</span></p>
+                          <time>4 мая 2022</time>
+                        </div>
+                      </div>
+                      <p>Пульт с батарейками?</p>
+                      <button type="button" class="question-btn">Ответить ...</button>
+                      <div class="question-answer">
+      
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab #5 - Documents -->
+            <div class="tab-pane fade" id="docs" role="tabpanel" tabindex="0">
+              <div class="box">
+                <ul class="docs-list">
+                  <li>
+                    <a href="" download>
+                      <img src="img/icon/pngIcon.png" alt="png Icon">
+                      <p>Штрихкод</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" download>
+                      <img src="img/icon/pdfIcon.png" alt="pdf Icon">
+                      <p>325766_Ballu_Conditioner_Platinum_DC_BSEI_Manual <strong>[ 0.99 Мб ]</strong></p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" download>
+                      <img src="img/icon/pdfIcon.png" alt="pdf Icon">
+                      <p>325766_Ballu_Conditioner_Platinum_DC_BSEI_Manual <strong>[ 0.99 Мб ]</strong></p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="reviews" role="tabpanel" tabindex="0">...</div>
-          <div class="tab-pane fade" id="faq" role="tabpanel" tabindex="0">...</div>
-          <div class="tab-pane fade" id="docs" role="tabpanel" tabindex="0">
-            <div class="box">
-              <ul class="docs-list">
-                <li>
-                  <a href="" download>
-                    <img src="img/icon/pngIcon.png" alt="png Icon">
-                    <p>Штрихкод</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="" download>
-                    <img src="img/icon/pdfIcon.png" alt="pdf Icon">
-                    <p>325766_Ballu_Conditioner_Platinum_DC_BSEI_Manual <strong>[ 0.99 Мб ]</strong></p>
-                  </a>
-                </li>
-                <li>
-                  <a href="" download>
-                    <img src="img/icon/pdfIcon.png" alt="pdf Icon">
-                    <p>325766_Ballu_Conditioner_Platinum_DC_BSEI_Manual <strong>[ 0.99 Мб ]</strong></p>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <!-- Tabs END -->
         </div>
       </div>
     </section>

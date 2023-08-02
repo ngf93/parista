@@ -37,3 +37,8 @@ function handleMaxRange(inp){
   children[13].style.left=value+'%';
   children[13].childNodes[1].innerHTML=inp.value;
 }
+
+
+function toggleClass(elem){
+  elem.nextElementSibling.classList.toggle('d-none');
+}
