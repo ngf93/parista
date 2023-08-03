@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @import 'fonts';
 @import 'Service';
@@ -402,6 +402,9 @@ button {
     width: fit-content;
     border-radius: $radius;
     font-weight: 700;
+    @media (max-width: $bp-sm) {
+        padding: .8em 1.1em;
+    }
     /* голубая кнопка */
     &-1 {
       @extend .btn;
@@ -2074,27 +2077,12 @@ header {
     overflow: hidden;
     @include safariFix();
     img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        position: relative;
-        z-index: 1;
-        @media (max-width: $bp-xl) {
-            height: 180px;
-        }
-        @media (max-width: $bp-sm) {
-            height: 60vw;
-        }
+        display: block;
+        margin: 0 auto 1em;
+        max-width: 100%;
     }
     h3 {
-        position: absolute;
-        z-index: 10;
-        bottom: .5em;
-        left: 0px;
-        width: 100%;
-        margin-bottom: 0px;
         text-align: center;
-        padding: 0em 0.5em;
     }
 }
 
@@ -2249,6 +2237,7 @@ header {
 /* Shopping Cart */
 .cart {
     @include list();
+    font-size: 16px;
     &-item {
         --w: 130px;
         margin-bottom: 1em;
@@ -2269,16 +2258,35 @@ header {
             padding: 1em 1.5em;
             border-radius: 1em;
         }
+        @media (max-width: $bp-sm) {
+            grid-template-columns: 2fr 2fr 3fr 2fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "image image title title"
+            "image image articul articul"
+            "image image price price"
+            "count checkbox checkbox delete";
+            gap: .5em;
+        }
         img {
             grid-area: image;
             width: var(--w);
             height: 100px;
             object-fit: contain;
+            @media (max-width: $bp-sm) {
+                display: block;
+                margin: 0 auto;
+            }
         }
         h6 {
             grid-area: title;
             font-size: .8em;
             @include textEllipsis();
+            @media (max-width: $bp-sm) {
+                white-space: normal;
+                overflow: auto;
+                text-overflow: unset;
+            }
         }
         .articul {
             grid-area: articul;
@@ -2297,6 +2305,9 @@ header {
                 width: 40px;
                 background-color: transparent;
                 border: none !important;
+                @media (max-width: $bp-sm) {
+                    width: 30px;
+                }
             }
             .plus, .minus {
                 @include flex();
@@ -2306,12 +2317,18 @@ header {
         .price {
             grid-area: price;
             @include flex(row, flex-end, center, nowrap);
+            @media (max-width: $bp-sm) {
+                font-weight: 700;
+                font-size: 1.5em;
+                justify-content: flex-start;
+            }
         }
         &-del {
             grid-area: delete;
             color: $gray;
             font-size: .8em;
             text-align: right;
+            @include flex(row, flex-end, center, nowrap);
         }
     }
 }
@@ -2343,6 +2360,12 @@ header {
                     stroke: $sky;
                 }
             }
+        }
+    }
+    .btn-1 {
+        font-size: 1.5em;
+        @media (max-width: $bp-lg) {
+            font-size: 1em;
         }
     }
 }
