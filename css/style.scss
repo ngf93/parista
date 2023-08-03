@@ -956,6 +956,9 @@ main {
     overflow: hidden;
     @include safariFix();
     min-height: calc(100vh - var(--h-height) - var(--f-height));
+    @media (max-width: $bp-sm) {
+        padding-top: 2em;
+    }
     .bgTop {
         --h: 400px;
         @include absBG(-1, 0px, var(--h));
@@ -997,6 +1000,10 @@ header {
         height: 50px;
         object-fit: scale-down;
         object-position: left center;
+        @media (max-width: $bp-sm) {
+            width: 130px;
+            height: 40px;
+        }
     }
     .formSearch {
         flex: 1;
@@ -1563,6 +1570,7 @@ header {
 
 /* Product */
 .product-card {
+    font-size: 16px;
     width: 100%;
     position: relative;
     padding: .7em;
@@ -1600,6 +1608,15 @@ header {
             }
         }
     }
+    &-rating {
+        @include flex(row, flex-start, center, nowrap);
+        margin-bottom: 1em;
+        img {
+            width: 1.375rem;
+            height: 1.375rem;
+            margin-right: .25rem;
+        }
+    }
     &-price {
         position: relative;
         @include flex(column, flex-end, flex-start, nowrap);
@@ -1629,6 +1646,12 @@ header {
         height: 2.5em;
         border-radius: 50%;
         @include flex();
+    }
+    .btn-1 {
+        font-size: 1.5em;
+        @media (max-width: $bp-lg) {
+            font-size: 1em;
+        }
     }
 }
 .product-page {
