@@ -245,6 +245,7 @@ h6 {
 }
 .white {color: $white;}
 .gray {color: $gray;}
+.dark {color: $dark-gray;}
 .sky {color: $sky;}
 .red {color: $red;}
 .green {color: $green2;}
@@ -359,12 +360,23 @@ select {
     min-width: 130px;
     padding: 0px;
     border: none;
-    background: url(../img/icon/chevron-down.svg) transparent;
+    background-color: transparent;
+    background-image: url(../img/icon/chevron-down.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - 0.3em) 50%;
     background-size: 0.6em;
     transition: $transition;
     padding-right: 1.2em;
+    &.input {
+        background-image: url(../img/icon/arrow-down.svg);
+        background-position: calc(100% - .6em) 50%;
+        background-size: 1.1em;
+        background-color: $light-sky;
+        border: 1px solid $light-sky;
+        border-radius: $radius;
+        padding: .55em 1.1em;
+        width: 100%;
+    }
 }
 button {
     background: none;
@@ -496,6 +508,19 @@ hr {margin: 0;}
     @media (max-width: $bp-md) {
         padding: 1.5em;
         border-radius: 1em;
+    }
+    &.empty {
+        height: 430px;
+        @include flex();
+        @media (max-width: $bp-lg) {
+            height: 320px;
+        }
+        @media (max-width: $bp-md) {
+            height: 260px;
+        }
+        @media (max-width: $bp-sm) {
+            height: 50vw;
+        }
     }
 }
 .xs-noBox {
@@ -801,8 +826,12 @@ main {
     @include safariFix();
     min-height: calc(100vh - var(--h-height) - var(--f-height));
     .bgTop {
-        @include absBG(-1, 0px, 400px);
+        --h: 400px;
+        @include absBG(-1, 0px, var(--h));
         &.darken {filter: brightness(0.8);}
+        @media (max-width: $bp-lg) {
+            --h: 350px;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -1316,7 +1345,7 @@ header {
             text-decoration: line-through;
             font-size: .9em;
             position: absolute;
-            top: 0.5em;
+            top: 0em;
             right: -.75em;
             line-height: 100%;
         }
@@ -1339,6 +1368,18 @@ header {
     --img-h: 350px;
     position: relative;
     padding: 3em 0em;
+    @media (max-width: $bp-xl) {
+        --img-h: 300px;
+    }
+    @media (max-width: $bp-lg) {
+        --img-h: 270px;
+    }
+    @media (max-width: $bp-md) {
+        --img-h: 35vw;
+    }
+    @media (max-width: $bp-sm) {
+        --img-h: 55vw;
+    }
     &-bg {
         background-color: #69AEFF;
         background-image: url(../img/cartBg.png), linear-gradient(270deg, #69AEFF 0%, rgba(182, 88, 207, 1.00) 48.96%, rgba(255, 159, 105, 0.99) 100%);
@@ -1352,13 +1393,28 @@ header {
         color: $white;
     }
     .sliders-wrap {
-        @include flex(row, flex-start, flex-start, nowrap);
-
+        @include flex(row-reverse, flex-start, flex-start, nowrap);
+        @media (max-width: $bp-lg) {
+            flex-direction: column;
+        }
     }
     .swiper-thumbs {
         height: var(--img-h);
         width: 130px;
         padding-bottom: 0px;
+        @media (max-width: $bp-xl) {
+            width: 100px;
+        }
+        @media (max-width: $bp-lg) {
+            width: 100%;
+            height: 70px;
+        }
+        @media (max-width: $bp-md) {
+            height: 10vw;
+        }
+        @media (max-width: $bp-sm) {
+            height: 15vw;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -1370,6 +1426,9 @@ header {
         height: var(--img-h);
         width: 100%;
         padding-bottom: 0px;
+        @media (max-width: $bp-lg) {
+            flex: unset;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -1380,6 +1439,9 @@ header {
         width: 100%;
         height: 70px;
         object-fit: contain;
+        @media (max-width: $bp-sm) {
+            height: 15vw;
+        }
     }
     div.feature {
         background-color: $sky;
@@ -1389,6 +1451,22 @@ header {
         text-align: center;
         height: 70px;
         @include flex();
+        @media (max-width: $bp-sm) {
+            height: 15vw;
+        }
+    }
+    .garanty {
+        font-size: 1.5em;
+        font-weight: 700;
+        @media (max-width: $bp-lg) {
+            font-size: 1em;
+        }
+    }
+    .accent-lg {
+        @media (min-width: $bp-lg) {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
     }
     .product-card-characteristics {
         font-size: 1em;
@@ -1402,6 +1480,7 @@ header {
             @include flex(row, flex-start, center, wrap);
             li {
                 margin-right: 10px;
+                margin-bottom: 4px;
                 label {
                     position: relative;
                     .text {
@@ -1412,6 +1491,9 @@ header {
                         border-radius: 6px;
                         padding: 6px 10px;
                         transition: $transition;
+                        @media (max-width: $bp-sm) {
+                            padding: 3px 5px;
+                        }
                         .name {
                             white-space: nowrap;
                         }
@@ -1440,6 +1522,7 @@ header {
         }
     }
 }
+
 .docs-list {
     @include list();
     li {
@@ -1473,6 +1556,13 @@ header {
             display: block;
             position: relative;
             transition: $transition;
+            @media (max-width: $bp-lg) {
+                padding: 1em;
+            }
+            @media (max-width: $bp-sm) {
+                font-size: .8em;
+                padding: 0.5em;
+            }
             &::after {
                 content: '';
                 position: absolute;
@@ -1554,6 +1644,9 @@ header {
     &-answerForm {
         padding-left: 2.3em;
         margin-top: 1.25em;
+        @media (min-width: $bp-lg) {
+            font-size: 1.5em;
+        }
     }
 }
 /* Product End */
@@ -1966,6 +2059,28 @@ header {
         }
         @media (max-width: $bp-sm) {
             font-size: 2em;
+        }
+    }
+}
+
+
+.modal {
+    &-content {
+        border: none;
+        position: relative;
+    }
+    .btn-close {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        z-index: 10;
+    }
+    &-body {
+        padding: 3em;
+        position: relative;
+        z-index: 1;
+        @media (max-width: $bp-sm) {
+            padding:2em;
         }
     }
 }

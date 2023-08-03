@@ -83,12 +83,17 @@ const swiper3 = new Swiper('.swiper-3', {
 });
 
 var swiper4 = new Swiper(".swiper-thumbs", {
-  direction: 'vertical',
+  direction: 'horizontal',
   loop: true,
   spaceBetween: 10,
   slidesPerView: 3,
   freeMode: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    992: {
+      direction: 'vertical',
+    },
+  }
 });
 var swiper5 = new Swiper(".swiper-main", {
   loop: true,
