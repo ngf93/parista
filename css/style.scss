@@ -95,6 +95,11 @@ $bp-xxl: 1399.98px;
       max-height: $line * $count;
     }
 }
+@mixin textEllipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 @mixin list {
     list-style: none;
     padding-left: 0px;
@@ -213,6 +218,7 @@ h6 {
     font-weight: 700;
     text-align: left;
 }
+.main-font {font-family: $main-font;}
 .title-font {font-family: $title-font;}
 .ruble {
     font-family: 'Nunito Sans';
@@ -461,9 +467,7 @@ button {
 }
 label {
     position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flex(row, flex-start, center, nowrap);
     span {flex:1;}
     .pill {
         position: relative;
@@ -474,6 +478,19 @@ label {
         padding: .4em .5em;
         transition: $transition;
     }
+    .pill-2 {
+        flex: 1;
+        position: relative;
+        z-index: 1;
+        background-color: $white;
+        @include shadow();
+        border-radius: $radius;
+        padding: .75em;
+        transition: $transition;
+        text-align: center;
+        color: $dark-gray;
+        font-weight: 400;
+    }
     input[hidden]{
         opacity: 0;
         @include absBG(10, 0px, 100%);
@@ -482,6 +499,39 @@ label {
         }
         &:checked + .pill, &:active + .pill {
             border: 1px solid $dark-gray;
+        }
+        &:hover + .pill-2, &:focus + .pill-2 {
+            background-color: $light-sky;
+        }
+        &:checked + .pill-2, &:active + .pill-2 {
+            background-color: $sky;
+            color: $white;
+            font-weight: 700;
+        }
+    }
+}
+.custom-tooltip {
+    --bs-tooltip-bg: #fff;
+    --bs-tooltip-color: #373737;
+    @include shadow();
+}
+.promoCode {
+    position: relative;
+    input {
+        position: relative;
+        z-index: 1;
+    }
+    button {
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        color: $sky;
+        font-size: .8em;
+        transform: translateY(-50%);
+        transition: $transition;
+        &:hover, &:focus, &:active {
+            color: $blue;
         }
     }
 }
@@ -498,6 +548,7 @@ label {
         margin-bottom: 4em;
     }
 }
+.flex-1 {flex: 1;}
 hr {margin: 0;}
 .box {
     @include box();
@@ -1522,7 +1573,6 @@ header {
         }
     }
 }
-
 .docs-list {
     @include list();
     li {
@@ -2063,6 +2113,107 @@ header {
     }
 }
 
+
+/* Shopping Cart */
+.cart {
+    @include list();
+    &-item {
+        --w: 130px;
+        margin-bottom: 1em;
+        display: grid;
+        grid-template-columns: var(--w) auto 1fr 1fr;
+        grid-template-rows: 1em 1em auto 1em;
+        gap: .5em 1em;
+        grid-template-areas: 
+        "image title title title"
+        "image articul articul articul"
+        "image checkbox count price"
+        "image . . delete";
+        @media (max-width: $bp-xl) {
+            --w: 100px;
+        }
+        @media (max-width: $bp-lg) {
+            @include box();
+            padding: 1em 1.5em;
+            border-radius: 1em;
+        }
+        img {
+            grid-area: image;
+            width: var(--w);
+            height: 100px;
+            object-fit: contain;
+        }
+        h6 {
+            grid-area: title;
+            font-size: .8em;
+            @include textEllipsis();
+        }
+        .articul {
+            grid-area: articul;
+            font-size: .8em;
+        }
+        label {
+            grid-area: checkbox;
+        }
+        .count {
+            grid-area: count;
+            @include flex(row, flex-end, center, nowrap);
+            input {
+                padding: .25em;
+                font-size: .8em;
+                text-align: center;
+                width: 40px;
+                background-color: transparent;
+                border: none !important;
+            }
+            .plus, .minus {
+                @include flex();
+                padding: .5em;
+            }
+        }
+        .price {
+            grid-area: price;
+            @include flex(row, flex-end, center, nowrap);
+        }
+        &-del {
+            grid-area: delete;
+            color: $gray;
+            font-size: .8em;
+            text-align: right;
+        }
+    }
+}
+.formCart {
+    @media (max-width: $bp-lg) {
+        box-shadow: none;
+        padding: 0px;
+        background-color: transparent;
+    }
+    &-main {
+        @media (max-width: $bp-lg) {
+            @include box();
+            padding: 1em 1.5em;
+            border-radius: 1em;
+        }
+    }
+    .btn-icon {
+        font-size: 2.25em;
+        svg {
+            path {
+                fill: $light-gray;
+                stroke: $light-gray;
+            }
+        }
+        &:hover, &:focus, &:active {
+            svg {
+                path {
+                    fill: $sky;
+                    stroke: $sky;
+                }
+            }
+        }
+    }
+}
 
 .modal {
     &-content {
