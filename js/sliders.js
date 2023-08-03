@@ -134,3 +134,13 @@ const swiper6 = new Swiper('.swiper-5', {
     }
   }
 });
+
+const swiper7 = new Swiper('.swiper-1', {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  navigation: false,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
