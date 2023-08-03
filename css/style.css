@@ -4549,6 +4549,25 @@ nav.pagination ul li button:hover, nav.pagination ul li button:focus, nav.pagina
   color: #69AEFF;
 }
 
+.collapse-toggler {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: left;
+}
+.collapse-toggler .icon {
+  width: 1.5em;
+  height: 1.5em;
+  transform: rotate(0deg);
+  transition: 300ms ease-in;
+}
+.collapse-toggler[aria-expanded=true] .icon {
+  transform: rotate(180deg);
+}
+
 .sliderRange {
   position: relative;
   height: 2px;
@@ -6124,6 +6143,7 @@ header .hoverMenu {
 }
 
 /* Catalog END */
+/* Services */
 .benefit {
   border-radius: 1em;
   position: relative;
@@ -6142,6 +6162,51 @@ header .hoverMenu {
   text-align: center;
 }
 
+.scheme img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  background-color: #8F8F8F;
+}
+@media (max-width: 1199.98px) {
+  .scheme img {
+    height: 160px;
+  }
+}
+@media (max-width: 767.98px) {
+  .scheme img {
+    height: 130px;
+  }
+}
+@media (max-width: 575.98px) {
+  .scheme img {
+    height: 40vw;
+  }
+}
+.scheme figcaption {
+  text-align: center;
+  font-weight: 700;
+}
+
+.services-faq {
+  background-color: #69AEFF;
+  padding: 3em 0em;
+}
+
+.services-price {
+  font-size: 1.5em;
+}
+@media (max-width: 767.98px) {
+  .services-price {
+    font-size: 1.1em;
+  }
+}
+
+/* Services END */
+/* Contacts */
 .sec-contacts {
   background: url(../img/bg/bg2.jpg) no-repeat center;
   background-size: cover;
@@ -6201,6 +6266,7 @@ header .hoverMenu {
   margin-right: 0.65em;
 }
 
+/* Politics */
 .sec-politics h6 {
   margin-top: 1.5em;
 }
@@ -6208,6 +6274,7 @@ header .hoverMenu {
   margin-bottom: 1em;
 }
 
+/* About */
 .sec-about-1 {
   position: relative;
 }
@@ -6307,6 +6374,7 @@ header .hoverMenu {
   width: 3em;
 }
 
+/* 404 page */
 .sec-notFound {
   background-color: #F6FAFF;
   background-image: url(../img/bg/bg404.png);
