@@ -4385,6 +4385,11 @@ hr {
 nav.breadcrumbs {
   margin-bottom: 2em;
 }
+@media (max-width: 767.98px) {
+  nav.breadcrumbs {
+    display: none;
+  }
+}
 nav.breadcrumbs ol {
   list-style: none;
   padding-left: 0px;
@@ -4461,7 +4466,7 @@ nav.pagination ul li button:hover, nav.pagination ul li button:focus, nav.pagina
   height: 2px;
   border-radius: 2px;
   text-align: left;
-  margin: 45px 0 10px 0;
+  margin: 2em 0 0.5em;
 }
 .sliderRange-view {
   position: absolute;
@@ -4509,8 +4514,8 @@ nav.pagination ul li button:hover, nav.pagination ul li button:focus, nav.pagina
 .sliderRange-view .sign {
   opacity: 0;
   position: absolute;
-  margin-left: -11px;
-  top: -39px;
+  margin-left: -18px;
+  top: -40px;
   z-index: 3;
   background-color: #69AEFF;
   color: #fff;
@@ -5844,6 +5849,7 @@ header .hoverMenu {
   border-radius: 3px;
 }
 
+/* Catalog */
 .categorie-card {
   padding: 0.5em 1em 0.75em;
   background-color: #fff;
@@ -5888,6 +5894,55 @@ header .hoverMenu {
   font-weight: 700;
 }
 .categorie-card figcaption a {
+  display: block;
+  text-align: center;
+  line-height: 110%;
+}
+
+.series-card {
+  padding: 0.5em 1em 0.75em;
+  background-color: #fff;
+  border-radius: 1.5em;
+  position: relative;
+  height: 100%;
+  transition: 300ms ease-in;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.05));
+}
+.series-card.all {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.series-card:hover {
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.05));
+}
+.series-card img {
+  width: 100%;
+  height: 280px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+@media (max-width: 991.98px) {
+  .series-card img {
+    height: 140px;
+  }
+}
+@media (max-width: 575.98px) {
+  .series-card img {
+    height: 55vw;
+  }
+}
+.series-card figcaption {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.series-card figcaption a {
   display: block;
   text-align: center;
   line-height: 110%;
@@ -5966,6 +6021,33 @@ header .hoverMenu {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+}
+
+.filterForm-item {
+  margin-bottom: 1.5em;
+}
+.filterForm-toggler {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.filterForm-toggler .icon {
+  width: 1.5em;
+  height: 1.5em;
+  transform: rotate(0deg);
+  transition: 300ms ease-in;
+}
+.filterForm-toggler[aria-expanded=true] .icon {
+  transform: rotate(180deg);
+}
+.filterForm .collapse {
+  padding: 1em 0px;
+}
+.filterForm .collapse ul li:not(:first-child) {
+  margin-top: 0.5em;
 }
 
 .benefit {
@@ -6331,4 +6413,10 @@ header .hoverMenu {
   .modal-body {
     padding: 2em;
   }
+}
+
+.offcanvas-body {
+  overflow-y: auto;
+  height: 100vh;
+  max-height: 100vh;
 }/*# sourceMappingURL=style.css.map */
