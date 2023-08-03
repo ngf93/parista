@@ -598,6 +598,9 @@ hr {margin: 0;}
 }
 .swiper {
     padding-bottom: 4em;
+    @media (max-width: $bp-lg) {
+        padding-bottom: 0px;
+    }
     &-button {
         position: absolute;
         top: unset;
@@ -610,6 +613,9 @@ hr {margin: 0;}
         color: $white;
         transition: $transition;
         @include flex();
+        @media (max-width: $bp-lg) {
+            display: none;
+        }
         &:hover, &:focus, &:active {
             background-color: $blue;
             color: $white;

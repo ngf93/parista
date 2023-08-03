@@ -106,3 +106,31 @@ var swiper5 = new Swiper(".swiper-main", {
     swiper: swiper4,
   },
 });
+
+const swiper6 = new Swiper('.swiper-5', {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 15,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    }
+  }
+});

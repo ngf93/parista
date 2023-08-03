@@ -4356,6 +4356,11 @@ hr {
 .swiper {
   padding-bottom: 4em;
 }
+@media (max-width: 991.98px) {
+  .swiper {
+    padding-bottom: 0px;
+  }
+}
 .swiper-button, .swiper-button-next, .swiper-button-prev {
   position: absolute;
   top: unset;
@@ -4372,6 +4377,11 @@ hr {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+}
+@media (max-width: 991.98px) {
+  .swiper-button, .swiper-button-next, .swiper-button-prev {
+    display: none;
+  }
 }
 .swiper-button:hover, .swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button:focus, .swiper-button-next:focus, .swiper-button-prev:focus, .swiper-button:active, .swiper-button-next:active, .swiper-button-prev:active {
   background-color: #305DE9;
