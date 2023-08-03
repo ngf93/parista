@@ -30,6 +30,7 @@ $radius: .45em;
 $green: #52EB89;
 $green2: #82D42B;
 $green3: #70B428;
+$yellow: #F9ED37;
 $light-sky: #F6FAFF;
 $sky: #69AEFF;
 $light-blue: #F2FBFF;
@@ -573,6 +574,17 @@ hr {margin: 0;}
             height: 50vw;
         }
     }
+    &-lg {
+        @media (max-width: $bp-lg) {
+            @include box();
+            padding: 2em;
+            border-radius: 1.25em;
+        }
+        @media (max-width: $bp-md) {
+            padding: 1.5em;
+            border-radius: 1em;
+        }
+    }
 }
 .xs-noBox {
     @media (max-width: $bp-sm) {
@@ -695,6 +707,71 @@ nav.pagination {
                 }
                 &:hover, &:focus, &:active {
                     color: $blue;
+                }
+            }
+        }
+    }
+}
+.tabs {
+    @include list();
+    @include flex(row, center, center, nowrap);
+    border: none;
+    margin-bottom: 1.5em;
+    li {
+        a, button {
+            color: $dark-gray;
+            padding: 1em 2em;
+            display: block;
+            position: relative;
+            transition: $transition;
+            @media (max-width: $bp-lg) {
+                padding: 1em;
+            }
+            @media (max-width: $bp-sm) {
+                font-size: .8em;
+                padding: 0.5em;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                background-color: $sky;
+                width: 3em;
+                height: 2px;
+                border-radius: 1px;
+                transform: translateX(-50%) scale(0);
+                transition: $transition;
+            }
+            &.active {
+                &::after {
+                    transform: translateX(-50%) scale(1);
+                }
+            }
+            &:hover, &:focus {
+                color: $sky;
+            }
+        }
+    }
+    &.tabsPills {
+        li {
+            a, button {
+                color: $gray;
+                background-color: $white;
+                border-radius: 1em;
+                padding: 1em 2em;
+                display: block;
+                position: relative;
+                @include shadow();
+                transition: $transition;
+                &::after {
+                    content: unset;
+                }
+                &.active {
+                    color: $dark-gray;
+                }
+                &:hover, &:focus {
+                    color: $sky;
                 }
             }
         }
@@ -1348,6 +1425,142 @@ header {
     }
 }
 
+.sec-quiz {
+    background: url(../img/bg/BG.jpg) no-repeat center;
+    background-size: cover;
+    padding: 3em 0px;
+    .box {
+        background-color: $white;
+        border-radius: 2em;
+        padding: 3em;
+        @media (max-width: $bp-sm) {
+            border-radius: 1em;
+            padding: 2em;
+        }
+    }
+    .carousel {
+        &-control {
+            opacity: 1;
+            position: relative;
+            color: $sky;
+            background-color: $white;
+            border: 1px solid $sky;
+            padding: 0.75em 1em;
+            font-weight: 700;
+            font-size: .9em;
+            border-radius: $radius;
+            transition: $transition;
+            @media (max-width: $bp-lg) {
+                flex:1;
+            }
+            @media (max-width: $bp-md) {
+                font-size: 1.1em;
+            }
+            @media (max-width: $bp-sm) {
+                width: 100%;
+                font-size: 1.2em;
+            }
+            &:hover {
+                background-color: $sky;
+                color: $white;
+            }
+            &-next {
+                @extend .carousel-control;
+            }
+            &-prev {
+                @extend .carousel-control;
+            }
+        }
+    }
+    .wrap {
+        position: relative;
+        width: 75%;
+        margin: 0 auto;
+        @media (max-width: $bp-lg) {
+            width: 90%;
+        }
+        @media (max-width: $bp-sm) {
+            width: 100%;
+        }
+    }
+    .swiper {
+        position: unset;
+        padding-bottom: 0em;
+        &-slide {
+            @media (max-width: $bp-sm) {
+                width: 155px;
+            }
+        }
+        &-button {
+            top: 50%;
+            bottom: unset;
+            transform: translateY(-50%);
+            @media (max-width: $bp-sm) {
+                display: none;
+            }
+            &-prev {
+                right: unset;
+                left: -2em;
+                @media (max-width: $bp-lg) {
+                    left: -1em;
+                }
+            }
+            &-next {
+                right: -2em;
+                left: unset;
+                @media (max-width: $bp-lg) {
+                    right: -1em;
+                }
+            }
+        } 
+    }
+}
+.option {
+    position: relative;
+    &-card {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        border-radius: 1em;
+        overflow: hidden;
+        @include safariFix();
+        transition: $transition;
+        background-color: $light-blue;
+        color: $dark-gray;
+        font-size: .85em;
+        font-weight: 700;
+        &:hover {
+            filter: drop-shadow(0px 0px 10px rgba(107, 135, 167, 0.16));
+        }
+        img {
+            width: 100%;
+            height: 125px;
+            object-fit: cover;
+        }
+        figcaption {
+            line-height: 100%;
+            height: 40px;
+            @include flex();
+            text-align: center;
+            padding: 0px 1em;
+        }
+    }
+    input:checked + .option-card {
+        background-color: $blue;
+        color: $white;
+    }
+}
+.progress {
+    height: 6px;
+    border-radius: 3px;
+    background-color: $light-blue;
+    &-bar {
+        background-color: $sky;
+        border-radius: 3px;
+    }
+}
+
+
 /* Product */
 .product-card {
     width: 100%;
@@ -1600,48 +1813,6 @@ header {
         }
     }
 }
-.tabs {
-    @include list();
-    @include flex(row, center, center, nowrap);
-    border: none;
-    margin-bottom: 1.5em;
-    li {
-        a, button {
-            color: $dark-gray;
-            padding: 1em 2em;
-            display: block;
-            position: relative;
-            transition: $transition;
-            @media (max-width: $bp-lg) {
-                padding: 1em;
-            }
-            @media (max-width: $bp-sm) {
-                font-size: .8em;
-                padding: 0.5em;
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 5%;
-                left: 50%;
-                background-color: $sky;
-                width: 3em;
-                height: 2px;
-                border-radius: 1px;
-                transform: translateX(-50%) scale(0);
-                transition: $transition;
-            }
-            &.active {
-                &::after {
-                    transform: translateX(-50%) scale(1);
-                }
-            }
-            &:hover, &:focus {
-                color: $sky;
-            }
-        }
-    }
-}
 .review {
     margin-bottom: 3em;
     &-user {
@@ -1707,140 +1878,6 @@ header {
 }
 /* Product End */
 
-.sec-quiz {
-    background: url(../img/bg/BG.jpg) no-repeat center;
-    background-size: cover;
-    padding: 3em 0px;
-    .box {
-        background-color: $white;
-        border-radius: 2em;
-        padding: 3em;
-        @media (max-width: $bp-sm) {
-            border-radius: 1em;
-            padding: 2em;
-        }
-    }
-    .carousel {
-        &-control {
-            opacity: 1;
-            position: relative;
-            color: $sky;
-            background-color: $white;
-            border: 1px solid $sky;
-            padding: 0.75em 1em;
-            font-weight: 700;
-            font-size: .9em;
-            border-radius: $radius;
-            transition: $transition;
-            @media (max-width: $bp-lg) {
-                flex:1;
-            }
-            @media (max-width: $bp-md) {
-                font-size: 1.1em;
-            }
-            @media (max-width: $bp-sm) {
-                width: 100%;
-                font-size: 1.2em;
-            }
-            &:hover {
-                background-color: $sky;
-                color: $white;
-            }
-            &-next {
-                @extend .carousel-control;
-            }
-            &-prev {
-                @extend .carousel-control;
-            }
-        }
-    }
-    .wrap {
-        position: relative;
-        width: 75%;
-        margin: 0 auto;
-        @media (max-width: $bp-lg) {
-            width: 90%;
-        }
-        @media (max-width: $bp-sm) {
-            width: 100%;
-        }
-    }
-    .swiper {
-        position: unset;
-        padding-bottom: 0em;
-        &-slide {
-            @media (max-width: $bp-sm) {
-                width: 155px;
-            }
-        }
-        &-button {
-            top: 50%;
-            bottom: unset;
-            transform: translateY(-50%);
-            @media (max-width: $bp-sm) {
-                display: none;
-            }
-            &-prev {
-                right: unset;
-                left: -2em;
-                @media (max-width: $bp-lg) {
-                    left: -1em;
-                }
-            }
-            &-next {
-                right: -2em;
-                left: unset;
-                @media (max-width: $bp-lg) {
-                    right: -1em;
-                }
-            }
-        } 
-    }
-}
-.option {
-    position: relative;
-    &-card {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        border-radius: 1em;
-        overflow: hidden;
-        @include safariFix();
-        transition: $transition;
-        background-color: $light-blue;
-        color: $dark-gray;
-        font-size: .85em;
-        font-weight: 700;
-        &:hover {
-            filter: drop-shadow(0px 0px 10px rgba(107, 135, 167, 0.16));
-        }
-        img {
-            width: 100%;
-            height: 125px;
-            object-fit: cover;
-        }
-        figcaption {
-            line-height: 100%;
-            height: 40px;
-            @include flex();
-            text-align: center;
-            padding: 0px 1em;
-        }
-    }
-    input:checked + .option-card {
-        background-color: $blue;
-        color: $white;
-    }
-}
-.progress {
-    height: 6px;
-    border-radius: 3px;
-    background-color: $light-blue;
-    &-bar {
-        background-color: $sky;
-        border-radius: 3px;
-    }
-}
 
 /* Catalog */
 .categorie-card {
@@ -1978,7 +2015,6 @@ header {
         }
     }
 }
-
 .filterForm {
     &-item {
         margin-bottom: 1.5em
@@ -2007,7 +2043,7 @@ header {
         }
     }
 }
-
+/* Catalog END */
 
 .benefit {
     border-radius: 1em;
@@ -2287,6 +2323,46 @@ header {
         }
     }
 }
+/* Shopping Cart END */
+
+
+/* User Page */
+.sec-profile {
+    .box {
+        @media (max-width: $bp-lg) {
+            box-shadow: none;
+            padding: 0px;
+            background: transparent;
+        }
+    }
+}
+.orders-list {
+    @include list();
+    font-size: 16px;
+    li {
+        margin-bottom: 1.5em;
+        @include flex(row, space-between, flex-start, nowrap);
+        time {
+            display: block;
+            text-align: right;
+            color: $gray;
+            font-size: .8em;
+        }
+        .processing {
+            color: $yellow;
+            font-size: .8em;
+            font-weight: 600;
+            text-align: right;
+        }
+        .canceled {
+            color: $red;
+            font-size: .8em;
+            font-weight: 600;
+            text-align: right;
+        }
+    }
+}
+/* User Page END */
 
 .modal {
     &-content {
@@ -2308,8 +2384,6 @@ header {
         }
     }
 }
-
-
 .offcanvas-lg {
     &-body {
         @media (max-width: $bp-lg) {
