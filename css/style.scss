@@ -1591,6 +1591,9 @@ header {
                 object-fit: contain;
                 margin-right: 1em;
             }
+            p {
+                @include textEllipsis();
+            }
         }
     }
 }

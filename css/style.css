@@ -5551,6 +5551,11 @@ header .hoverMenu {
      object-fit: contain;
   margin-right: 1em;
 }
+.docs-list li a p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .tabs {
   list-style: none;
