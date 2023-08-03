@@ -6415,8 +6415,10 @@ header .hoverMenu {
   }
 }
 
-.offcanvas-body {
-  overflow-y: auto;
-  height: 100vh;
-  max-height: 100vh;
+@media (max-width: 991.98px) {
+  .offcanvas-lg-body {
+    overflow-y: auto;
+    height: 100vh;
+    max-height: 100vh;
+  }
 }/*# sourceMappingURL=style.css.map */

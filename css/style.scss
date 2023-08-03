@@ -2310,10 +2310,12 @@ header {
 }
 
 
-.offcanvas {
+.offcanvas-lg {
     &-body {
-        overflow-y: auto;
-        height: 100vh;
-        max-height: 100vh;
+        @media (max-width: $bp-lg) {
+            overflow-y: auto;
+            height: 100vh;
+            max-height: 100vh;
+        }
     }
 }
