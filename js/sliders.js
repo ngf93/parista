@@ -144,3 +144,14 @@ const swiper7 = new Swiper('.swiper-1', {
     el: ".swiper-pagination",
   },
 });
+
+const swiper8 = new Swiper('.swiper-free', {
+  loop: true,
+  freeMode: true,
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

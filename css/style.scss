@@ -139,6 +139,7 @@ a, a:hover, a:focus, a:active {
     outline: none;
     text-decoration: none;
     cursor: pointer;
+    outline: none !important;
 }
 h1, h2, h3, h4, h5, h6, p, label, span, a, button, form, fieldset, legend, select, input, textarea, button, div, blockquote, cite, figure, figcaption, table, ul, ol, dl, li, address {
     line-height: normal;
@@ -265,6 +266,7 @@ input, textarea {
     outline: none;
     display: block;
     transition: $transition;
+    outline: none !important;
     @include placeholder($gray, 400);
     &:hover, &:focus, &:active {
         border: 1px solid $dark-gray;
@@ -360,6 +362,7 @@ select {
     background-size: 0.6em;
     transition: $transition;
     padding-right: 1.2em;
+    outline: none !important;
     &.input {
         background-image: url(../img/icon/arrow-down.svg);
         background-position: calc(100% - .6em) 50%;
@@ -378,8 +381,8 @@ button {
     padding: unset;
     display: block;
     font-family: inherit;
-    outline: none;
     color: inherit;
+    outline: none !important;
 }
 .btn {
     @include flex(row, center, center, nowrap);
@@ -465,7 +468,31 @@ button {
             }
         }
     }
+    &-pill {
+        background-color: transparent;
+        color: $dark-gray;
+        transition: $transition;
+        padding: 6px 10px;
+        border-radius: 8px;
+        .badge {
+            background-color: $light-gray;
+            color: inherit;
+            font-weight: 700;
+            font-size: 1em;
+            padding: .2em .45em;
+            border-radius: 3px;
+            transition: $transition;
+        }
+        &.active {
+            background-color: $sky;
+            color: $white;
+            .badge {
+                background-color: rgba($color: $white, $alpha: 0.5);
+            }
+        }
+    }
 }
+
 label {
     position: relative;
     @include flex(row, flex-start, center, nowrap);
@@ -615,6 +642,7 @@ hr {margin: 0;}
         color: $white;
         transition: $transition;
         @include flex();
+        outline: none !important;
         @media (max-width: $bp-lg) {
             display: none;
         }
@@ -1067,8 +1095,8 @@ header {
                             display: none;
                         }
                     }
-                    &:hover, &:focus, &:active {
-                        svg {color: $blue;}
+                    &:hover, &:focus, &:active, &.active {
+                        svg {color: $sky;}
                     }
                 }
             }
@@ -1348,10 +1376,10 @@ header {
             content: '';
             position: absolute;
             z-index: 1;
-            left: -18%;
-            top: -65%;
-            height: var(--h2);
-            width: var(--h2);
+            left: -20%;
+            top: -60%;
+            height: 95%;
+            width: 140%;
             border-radius: 50%;
             background-color: rgba($color: $dark-gray, $alpha: 0.2);
         }
@@ -2176,6 +2204,7 @@ header {
 }
 /* Catalog END */
 
+
 /* Services */
 .benefit {
     border-radius: 1em;
@@ -2225,6 +2254,7 @@ header {
     }
 }
 /* Services END */
+
 
 /* Contacts */
 .sec-contacts {
@@ -2527,6 +2557,49 @@ header {
 /* Shopping Cart END */
 
 
+/* Compare */
+.sec-compare {
+    .wrap {
+        position: relative;
+        padding: 0 10%;
+        .swiper-free {
+            position: unset;
+            padding-bottom: 0px;
+            .swiper-slide {
+                width: fit-content;
+            }
+            .swiper-button-prev {
+                left: 0px;
+                right: unset;
+                top: 50%;
+                bottom: unset;
+                transform: translateY(-50%);
+            }
+            .swiper-button-next {
+                right: 0px;
+                left: unset;
+                top: 50%;
+                bottom: unset;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+.deleteAll {
+    svg {
+        color: $light-gray;
+        transition: $transition;
+    }
+    &:hover, &:focus, &:active {
+        svg {
+            color: $sky;
+        }
+    }
+}
+
+/* Compare END */
+
+
 /* User Page */
 .sec-profile {
     .box {
@@ -2564,6 +2637,7 @@ header {
     }
 }
 /* User Page END */
+
 
 .modal {
     &-content {
