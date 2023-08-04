@@ -440,7 +440,20 @@ button {
             background: $white;
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
         }
-      }
+    }
+    /* белая кнопка с голубым тектом */
+    &-3 {
+        @extend .btn;
+        color: $sky;
+        background: $white;
+        border: 2px solid $white;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.07);
+        &:hover, &:focus, &:active, &.active {
+            color: $hover;
+            background: $white;
+            border: 2px solid $white;;
+        }
+    }
     &-icon {
         @include flex();
         font-size: 2em;
@@ -2251,6 +2264,175 @@ header {
     font-size: 1.5em;
     @media (max-width: $bp-md) {
         font-size: 1.1em;
+    }
+}
+.service-grid {
+    --h1: 360px;
+    --h2: 300px;
+    --h3: 200px;
+    display: grid;
+    grid-template-columns: 4fr 3fr 3fr;
+    grid-template-rows: var(--h1) var(--h2) var(--h3);
+    gap: 2em 2em;
+    grid-template-areas:
+    "block1 block1 block1"
+    "block2 block3 block3"
+    "block2 block4 block5";
+    color: $white;
+    @media (max-width: $bp-xxl) {
+        --h3: 180px;
+    }
+    @media (max-width: $bp-xl) {
+        gap: 1em 1em;
+        --h1: 330px;
+        --h2: 270px;
+        --h3: 150px;
+    }
+    @media (max-width: $bp-lg) {
+        --h1: 270px;
+        --h2: 200px;
+        --h3: 120px;
+    }
+    @media (max-width: $bp-md) {
+        --h1: 110px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 110px auto 145px 135px;
+        grid-template-areas:
+        "block1 block1 block1"
+        "block6 block6 block6"
+        "block2 block4 block5"
+        "block3 block3 block3";
+        }
+    &>div {
+        border-radius: 1.5rem;
+        overflow: hidden;
+        @include safariFix();
+        @media (max-width: $bp-lg) {
+            border-radius: 1.25rem;
+            .fs-15 {
+                font-size: 1.3em;
+            }
+        }
+        @media (max-width: $bp-md) {
+            border-radius: .75rem;
+            .fs-15 {
+                font-size: 1em;
+            }
+        }
+    }
+    .block1 {
+        grid-area: block1;
+        background-color: $dark-gray;
+        color: $white;
+        @media (max-width: $bp-lg) {
+            padding: 0 1em;
+        }
+        h2 {
+            font-size: 3em;
+            @media (max-width: $bp-xl) {
+                font-size: 2.5em;
+            }
+            @media (max-width: $bp-lg) {
+                font-size: 2em;
+            }
+            @media (max-width: $bp-md) {
+                font-size: 1.6em;
+            }
+        }
+        img {
+            display: block;
+            height: var(--h1);
+            object-fit: contain;
+            object-position: center bottom;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .block2 {
+        grid-area: block2;
+        background-color: $sky;
+        background-image: url(../img/bg/BGSevice.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left bottom;
+        padding: 1.8em;
+        @media (max-width: $bp-lg) {
+            padding: 1.5em;
+            font-size: .8em;
+        }
+        @media (max-width: $bp-md) {
+            padding: 1.5em 1em;
+            font-size: .65em;
+        }
+    }
+    .block3 {
+        grid-area: block3;
+        background-color: $sky;
+        background-image: url(../img/bg/BGSevice2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center bottom;
+        padding: 1.8em;
+        @media (max-width: $bp-lg) {
+            padding: 1.5em;
+            font-size: .8em;
+        }
+        @media (max-width: $bp-md) {
+            font-size: 1em;
+        }
+    }
+    .block4 {
+        grid-area: block4;
+        background-color: $dark-gray;
+        background-image: url(../img/bg/BGSevice3.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right top;
+        padding: 1.8em;
+        @media (max-width: $bp-xxl) {
+            font-size: .8em;
+        }
+        @media (max-width: $bp-xl) {
+            font-size: .7em;
+        }
+        @media (max-width: $bp-lg) {
+            padding: 1.5em;
+            font-size: .65em;
+        }
+        @media (max-width: $bp-md){
+            background-position: right bottom;
+            background-image: url(../img/bg/BGSevice3mob.png);
+        }
+    }
+    .block5 {
+        grid-area: block5;
+        background-color: $dark-gray;
+        background-image: url(../img/bg/BGSevice4.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right top;
+        padding: 1.8em;
+        @media (max-width: $bp-xxl) {
+            font-size: .8em;
+        }
+        @media (max-width: $bp-xl) {
+            font-size: .7em;
+        }
+        @media (max-width: $bp-lg) {
+            padding: 1.5em;
+            font-size: .65em;
+        }
+        @media (max-width: $bp-md){
+            background-position: right bottom;
+            background-image: url(../img/bg/BGSevice4mob.png);
+        }
+    }
+    .block6 {
+        display: none;
+        grid-area: block6;
+        @media (max-width: $bp-md) {
+            display: block;
+        }
     }
 }
 /* Services END */
