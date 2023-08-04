@@ -20,14 +20,14 @@
         <ul>
           <li><a href="">Акции</a></li>
           <li><a href="">О нас</a></li>
-          <li><a href="">Монтаж</a></li>
+          <li><a href="service.html">Монтаж</a></li>
           <li><a href="">Наши проекты</a></li>
         </ul>
       </nav>
-      <button type="button" class="btn-1">Обратный звонок</button>
+      <button type="button" class="btn-1" data-bs-toggle="modal" data-bs-target="#modalCallback">Обратный звонок</button>
     </div>
 
-    <div class="container d-flex align-items-center justify-content-between mb-3">
+    <div class="container d-flex align-items-center justify-content-between mb-2 mb-sm-3">
       <a href="index.html">
         <img src="img/logo-dark.png" alt="logo" class="logo">
       </a>
@@ -62,7 +62,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="cart.html">
               <svg width="1em" height="1em" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.9021 30C13.2694 30 12.7279 29.7652 12.2778 29.2956C11.8268 28.8252 11.6014 28.26 11.6014 27.6C11.6014 26.94 11.8268 26.3748 12.2778 25.9044C12.7279 25.4348 13.2694 25.2 13.9021 25.2C14.5347 25.2 15.0762 25.4348 15.5263 25.9044C15.9773 26.3748 16.2027 26.94 16.2027 27.6C16.2027 28.26 15.9773 28.8252 15.5263 29.2956C15.0762 29.7652 14.5347 30 13.9021 30ZM25.4055 30C24.7728 30 24.2314 29.7652 23.7812 29.2956C23.3303 28.8252 23.1048 28.26 23.1048 27.6C23.1048 26.94 23.3303 26.3748 23.7812 25.9044C24.2314 25.4348 24.7728 25.2 25.4055 25.2C26.0382 25.2 26.58 25.4348 27.0309 25.9044C27.4811 26.3748 27.7062 26.94 27.7062 27.6C27.7062 28.26 27.4811 28.8252 27.0309 29.2956C26.58 29.7652 26.0382 30 25.4055 30ZM12.9243 10.8L15.6851 16.8H23.7375L26.9009 10.8H12.9243ZM13.9021 24C13.0393 24 12.3874 23.6048 11.9465 22.8144C11.5055 22.0248 11.4863 21.24 11.889 20.46L13.4419 17.52L9.30068 8.4H8.12158C7.79565 8.4 7.52724 8.2848 7.31634 8.0544C7.10545 7.8248 7 7.54 7 7.2C7 6.86 7.11043 6.5748 7.3313 6.3444C7.5514 6.1148 7.82441 6 8.15034 6H10.0196C10.2305 6 10.4319 6.06 10.6236 6.18C10.8153 6.3 10.9591 6.47 11.055 6.69L11.8314 8.4H28.799C29.3166 8.4 29.6713 8.6 29.8631 9C30.0548 9.4 30.0452 9.82 29.8343 10.26L25.7506 17.94C25.5397 18.34 25.2617 18.65 24.9166 18.87C24.5715 19.09 24.1784 19.2 23.7375 19.2H15.1674L13.9021 21.6H26.5846C26.9105 21.6 27.1789 21.7148 27.3898 21.9444C27.6007 22.1748 27.7062 22.46 27.7062 22.8C27.7062 23.14 27.5957 23.4248 27.3749 23.6544C27.1548 23.8848 26.8818 24 26.5558 24H13.9021ZM15.6851 16.8H23.7375H15.6851Z" fill="currentColor"/>
               </svg>                
@@ -70,18 +70,18 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalLogin">
               <svg width="1em" height="1em" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 6C19.5913 6 21.1174 6.63214 22.2426 7.75736C23.3679 8.88258 24 10.4087 24 12C24 13.5913 23.3679 15.1174 22.2426 16.2426C21.1174 17.3679 19.5913 18 18 18C16.4087 18 14.8826 17.3679 13.7574 16.2426C12.6321 15.1174 12 13.5913 12 12C12 10.4087 12.6321 8.88258 13.7574 7.75736C14.8826 6.63214 16.4087 6 18 6ZM18 9C17.2044 9 16.4413 9.31607 15.8787 9.87868C15.3161 10.4413 15 11.2044 15 12C15 12.7956 15.3161 13.5587 15.8787 14.1213C16.4413 14.6839 17.2044 15 18 15C18.7956 15 19.5587 14.6839 20.1213 14.1213C20.6839 13.5587 21 12.7956 21 12C21 11.2044 20.6839 10.4413 20.1213 9.87868C19.5587 9.31607 18.7956 9 18 9ZM18 19.5C22.005 19.5 30 21.495 30 25.5V30H6V25.5C6 21.495 13.995 19.5 18 19.5ZM18 22.35C13.545 22.35 8.85 24.54 8.85 25.5V27.15H27.15V25.5C27.15 24.54 22.455 22.35 18 22.35Z" fill="currentColor"/>
               </svg>                
               <span>Войти</span>            
-            </a>
+            </button>
           </li>
           <li class="d-lg-none">
-            <button  type="button">
+            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
               <svg width="1em" height="1em" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 28H30M15 18.3929H30M6 9H30" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>                
+              </svg>            
             </a>
           </li>
         </ul>
@@ -105,7 +105,7 @@
             </a>
           </li>
           <li>
-            <a href="catalog.html" data-menu="hoverMenu-3" onmouseenter="showHoverMenu(this.dataset.menu)">
+            <a href="catalog.html">
               <img src="img/accessory.svg" alt="Аксессуары">
               <span>Аксессуары</p>
             </a>
@@ -190,25 +190,29 @@
       <section class="hoverMenu" id="hoverMenu-2">
         <div class="container">
           <h4 class="text-start mb-4">Воздух</h4>
-          <ul class="list-unstyled row row-cols-4 g-4">
+          <ul class="list-unstyled row row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
             <li>
               <figure class="categorie-card">
-                <img src="img/ConditionerOnWall.png" alt="Настенные" class="img-fluid">
-                <figcaption><a href="category.html" class="stretched-link">Настенные</a></figcaption>
+                <img src="img/ConditionersAirCleaners.png" alt="Воздухоочистители" class="img-fluid">
+                <figcaption><a href="category.html" class="stretched-link">Воздухоочистители</a></figcaption>
               </figure>
             </li>
-          </ul>
-        </div>
-      </section>
-      <section class="hoverMenu" id="hoverMenu-3">
-        <div class="container">
-          <h4 class="text-start mb-4">Аксессуары</h4>
-          <ul class="list-unstyled row row-cols-4 g-4">
             <li>
               <figure class="categorie-card">
-                <img src="img/ConditionerOnWall.png" alt="Настенные" class="img-fluid">
-                <figcaption><a href="category.html" class="stretched-link">Настенные</a></figcaption>
+                <img src="img/ConditionersHumidifiers.png" alt="Увлажнители воздуха" class="img-fluid">
+                <figcaption><a href="category.html" class="stretched-link">Увлажнители воздуха</a></figcaption>
               </figure>
+            </li>
+            <li>
+              <figure class="categorie-card">
+                <img src="img/img.png" alt="Приточная вентиляция" class="img-fluid">
+                <figcaption><a href="category.html" class="stretched-link">Приточная вентиляция</a></figcaption>
+              </figure>
+            </li>
+            <li>
+              <div class="categorie-card all">
+                <a href="category.html" class="stretched-link">Все категории</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -216,7 +220,62 @@
     </div>
   </header>
 
-  
+  <!-- Mobile Menu -->
+  <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-body">
+      <form action="" class="formSearch mb-4">
+        <select>
+          <option value="" selected>Все категории</option>
+          <option value="">Категория 1</option>
+          <option value="">Категория 2</option>
+        </select>
+        <hr>
+        <input type="search" placeholder="Поиск по каталогу">
+        <button type="submit" class="btn-1">
+          <img src="img/icon/search.svg" alt="Поиск">
+        </button>
+      </form>
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <div class="row g-2 g-md-4 align-items-center">
+            <div class="col-5">
+              <a href="" class="d-flex align-items-center">
+                <svg width="2.25em" height="2.25em" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 30C1.5 30.8284 2.17157 31.5 3 31.5H7.90909C8.73752 31.5 9.40909 30.8284 9.40909 30V13.5C9.40909 12.6716 8.73752 12 7.90909 12H3C2.17157 12 1.5 12.6716 1.5 13.5V30ZM13.5909 30C13.5909 30.8284 14.2625 31.5 15.0909 31.5H20C20.8284 31.5 21.5 30.8284 21.5 30V6C21.5 5.17157 20.8284 4.5 20 4.5H15.0909C14.2625 4.5 13.5909 5.17157 13.5909 6V30ZM25.6818 30C25.6818 30.8284 26.3534 31.5 27.1818 31.5H32.0909C32.9193 31.5 33.5909 30.8284 33.5909 30V19.5C33.5909 18.6716 32.9193 18 32.0909 18H27.1818C26.3534 18 25.6818 18.6716 25.6818 19.5V30Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                </svg>
+                <span class="ms-2 ms-sm-3">Сравнение</span>            
+              </a>
+            </div>
+            <div class="col-7">
+              <div class="row align-items-center">
+                <div class="col-7 col-sm-6"><a href="" >Наши проекты</a></div>
+                <div class="col-5 col-sm-6"><a href="" >Акции</a></div>
+              </div>
+            </div>
+            <div class="col-5">
+              <a href="favorite.html" class="d-flex align-items-center">
+                <svg width="2.25em" height="2.25em" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.635 26.3379L18.5 26.4687L18.3515 26.3379C11.939 20.7008 7.7 16.9733 7.7 13.1935C7.7 10.5777 9.725 8.6158 12.425 8.6158C14.504 8.6158 16.529 9.92371 17.2445 11.7025H19.7555C20.471 9.92371 22.496 8.6158 24.575 8.6158C27.275 8.6158 29.3 10.5777 29.3 13.1935C29.3 16.9733 25.061 20.7008 18.635 26.3379ZM24.575 6C22.226 6 19.9715 7.0594 18.5 8.72044C17.0285 7.0594 14.774 6 12.425 6C8.267 6 5 9.15204 5 13.1935C5 18.1243 9.59 22.1657 16.5425 28.2736L18.5 30L20.4575 28.2736C27.41 22.1657 32 18.1243 32 13.1935C32 9.15204 28.733 6 24.575 6Z" fill="currentColor"/>
+                </svg>                
+                <span class="ms-2 ms-sm-3">Избранное</span>            
+              </a>
+            </div>
+            <div class="col-7">
+              <div class="row align-items-center">
+                <div class="col-7 col-sm-6"><a href="service.html">Монтаж</a></div>
+                <div class="col-5 col-sm-6"><a href="about.html">О нас</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 fs-6">
+          <a href="tel:+74993943416" class="d-block text-center text-md-end link fw-7 mt-3 mt-md-2 mb-3 mb-sm-4">+7(499) 394-34-16</a>
+          <button type="button" class="btn-1 w-md-100 ms-md-auto" data-bs-toggle="modal" data-bs-target="#modalCallback">Вызвать специалиста</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <main>
     <!-- Пустое Избранное -->
     <!-- <section class="bgTop">
@@ -236,15 +295,24 @@
     </section> -->
 
     <!-- Избранное с товарами -->
-    <section class="container mb-6">
-      <h1>Избранное</h1>
-      <a href="catalog.html" class="link d-flex align-items-center mb-4 mb-md-5">
-        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.025 5.3625C5.175 5.5125 5.247 5.69375 5.241 5.90625C5.2345 6.11875 5.15625 6.3 5.00625 6.45L2.8875 8.56875H16.25C16.4625 8.56875 16.6407 8.64075 16.7847 8.78475C16.9282 8.92825 17 9.10635 17 9.31885C17 9.53135 16.9282 9.7095 16.7847 9.8535C16.6407 9.997 16.4625 10.0688 16.25 10.0688H2.8875L5.025 12.2063C5.175 12.3563 5.25 12.5345 5.25 12.741C5.25 12.947 5.175 13.125 5.025 13.275C4.875 13.425 4.69675 13.5 4.49025 13.5C4.28425 13.5 4.10625 13.425 3.95625 13.275L0.525003 9.84375C0.450002 9.76875 0.39675 9.6875 0.365251 9.6C0.33425 9.5125 0.318749 9.41875 0.318749 9.31875C0.318749 9.21875 0.33425 9.125 0.365251 9.0375C0.39675 8.95 0.450002 8.86875 0.525003 8.79375L3.975 5.34375C4.1125 5.20625 4.28425 5.1375 4.49025 5.1375C4.69675 5.1375 4.875 5.2125 5.025 5.3625Z" fill="currentColor"/>
-        </svg>                    
-        <span class="ms-2">Вернуться к каталогу</span>
-      </a>
-
+    <section class="sec-favorite container mb-6">
+      <div class="d-flex justify-content-between align-items-center mb-4 mb-md-5">
+        <div>
+          <h1>Избранное</h1>
+          <a href="catalog.html" class="link d-flex align-items-center">
+            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.025 5.3625C5.175 5.5125 5.247 5.69375 5.241 5.90625C5.2345 6.11875 5.15625 6.3 5.00625 6.45L2.8875 8.56875H16.25C16.4625 8.56875 16.6407 8.64075 16.7847 8.78475C16.9282 8.92825 17 9.10635 17 9.31885C17 9.53135 16.9282 9.7095 16.7847 9.8535C16.6407 9.997 16.4625 10.0688 16.25 10.0688H2.8875L5.025 12.2063C5.175 12.3563 5.25 12.5345 5.25 12.741C5.25 12.947 5.175 13.125 5.025 13.275C4.875 13.425 4.69675 13.5 4.49025 13.5C4.28425 13.5 4.10625 13.425 3.95625 13.275L0.525003 9.84375C0.450002 9.76875 0.39675 9.6875 0.365251 9.6C0.33425 9.5125 0.318749 9.41875 0.318749 9.31875C0.318749 9.21875 0.33425 9.125 0.365251 9.0375C0.39675 8.95 0.450002 8.86875 0.525003 8.79375L3.975 5.34375C4.1125 5.20625 4.28425 5.1375 4.49025 5.1375C4.69675 5.1375 4.875 5.2125 5.025 5.3625Z" fill="currentColor"/>
+            </svg>                    
+            <span class="ms-2">Вернуться к каталогу</span>
+          </a>
+        </div>
+        <button type="button" class="deleteAll">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 36 36" fill="none">
+            <path d="M11.6016 4.1484L11.7784 3.97162L11.6016 4.1484C11.8067 4.35352 12.0849 4.46875 12.375 4.46875H23.625C23.9151 4.46875 24.1933 4.35352 24.3984 4.1484C24.6035 3.94328 24.7188 3.66508 24.7188 3.375C24.7188 3.08492 24.6035 2.80672 24.3984 2.6016C24.1933 2.39648 23.9151 2.28125 23.625 2.28125H12.375C12.0849 2.28125 11.8067 2.39648 11.6016 2.6016L11.7775 2.7775L11.6016 2.6016C11.3965 2.80672 11.2812 3.08492 11.2812 3.375C11.2812 3.66508 11.3965 3.94328 11.6016 4.1484ZM30.375 6.78125H5.625C5.33492 6.78125 5.05672 6.89648 4.8516 7.1016C4.64648 7.30672 4.53125 7.58492 4.53125 7.875C4.53125 8.16508 4.64648 8.44328 4.8516 8.6484C5.05672 8.85352 5.33492 8.96875 5.625 8.96875H6.78125V29.25C6.78125 29.8384 7.01501 30.4028 7.43111 30.8189C7.8472 31.235 8.41155 31.4688 9 31.4688H27C27.5884 31.4688 28.1528 31.235 28.5689 30.8189C28.985 30.4028 29.2188 29.8384 29.2188 29.25V8.96875H30.375C30.6651 8.96875 30.9433 8.85352 31.1484 8.6484C31.3535 8.44328 31.4688 8.16508 31.4688 7.875C31.4688 7.58492 31.3535 7.30672 31.1484 7.1016C30.9433 6.89648 30.6651 6.78125 30.375 6.78125ZM27.0312 29.25C27.0312 29.2583 27.028 29.2662 27.0221 29.2721L27.1989 29.4489L27.0221 29.2721C27.0162 29.278 27.0083 29.2812 27 29.2812H9C8.99171 29.2812 8.98376 29.278 8.97791 29.2721L8.80113 29.4489L8.9779 29.2721C8.97204 29.2662 8.96875 29.2583 8.96875 29.25V8.96875H27.0312V29.25Z" fill="currentColor" stroke="currentColor" stroke-width="0.5"/>
+          </svg>
+        </button>
+      </div>
+      
       <ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
         <li>
           <div class="product-card">
@@ -283,7 +351,7 @@
                     <path d="M1.58572 30C1.58572 30.8284 2.2573 31.5 3.08572 31.5H8.13507C8.9635 31.5 9.63507 30.8284 9.63507 30V13.5C9.63507 12.6716 8.9635 12 8.13507 12H3.08572C2.2573 12 1.58572 12.6716 1.58572 13.5V30ZM14.0221 30C14.0221 30.8284 14.6937 31.5 15.5221 31.5H20.5714C21.3999 31.5 22.0714 30.8284 22.0714 30V6C22.0714 5.17157 21.3999 4.5 20.5714 4.5H15.5221C14.6937 4.5 14.0221 5.17157 14.0221 6V30ZM26.4585 30C26.4585 30.8284 27.13 31.5 27.9585 31.5H33.0078C33.8362 31.5 34.5078 30.8284 34.5078 30V19.5C34.5078 18.6716 33.8362 18 33.0078 18H27.9585C27.13 18 26.4585 18.6716 26.4585 19.5V30Z" stroke-width="3" stroke-linejoin="round"/>
                   </svg>
                 </button>
-                <button type="button" class="btn-icon ms-2" onclick='toggleActive(this)'>
+                <button type="button" class="btn-icon active ms-2" onclick='toggleActive(this)'>
                   <svg width="1em" height="1em" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.5347 27.1486L17.5325 27.1467C14.026 24.0662 11.2387 21.6103 9.31054 19.3248C7.39718 17.057 6.5 15.15 6.5 13.1935C6.5 10.0267 9.04846 7.5 12.425 7.5C14.3379 7.5 16.1859 8.37035 17.3772 9.7151L18.5 10.9825L19.6228 9.7151C20.8141 8.37035 22.6621 7.5 24.575 7.5C27.9515 7.5 30.5 10.0267 30.5 13.1935C30.5 15.15 29.6028 17.057 27.6895 19.3248C25.7613 21.6103 22.974 24.0662 19.4675 27.1467L19.4653 27.1486L18.5 28L17.5347 27.1486Z" stroke-width="3"/>
                   </svg>                                    
@@ -331,7 +399,7 @@
                     <path d="M1.58572 30C1.58572 30.8284 2.2573 31.5 3.08572 31.5H8.13507C8.9635 31.5 9.63507 30.8284 9.63507 30V13.5C9.63507 12.6716 8.9635 12 8.13507 12H3.08572C2.2573 12 1.58572 12.6716 1.58572 13.5V30ZM14.0221 30C14.0221 30.8284 14.6937 31.5 15.5221 31.5H20.5714C21.3999 31.5 22.0714 30.8284 22.0714 30V6C22.0714 5.17157 21.3999 4.5 20.5714 4.5H15.5221C14.6937 4.5 14.0221 5.17157 14.0221 6V30ZM26.4585 30C26.4585 30.8284 27.13 31.5 27.9585 31.5H33.0078C33.8362 31.5 34.5078 30.8284 34.5078 30V19.5C34.5078 18.6716 33.8362 18 33.0078 18H27.9585C27.13 18 26.4585 18.6716 26.4585 19.5V30Z" stroke-width="3" stroke-linejoin="round"/>
                   </svg>
                 </button>
-                <button type="button" class="btn-icon ms-2" onclick='toggleActive(this)'>
+                <button type="button" class="btn-icon active ms-2" onclick='toggleActive(this)'>
                   <svg width="1em" height="1em" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.5347 27.1486L17.5325 27.1467C14.026 24.0662 11.2387 21.6103 9.31054 19.3248C7.39718 17.057 6.5 15.15 6.5 13.1935C6.5 10.0267 9.04846 7.5 12.425 7.5C14.3379 7.5 16.1859 8.37035 17.3772 9.7151L18.5 10.9825L19.6228 9.7151C20.8141 8.37035 22.6621 7.5 24.575 7.5C27.9515 7.5 30.5 10.0267 30.5 13.1935C30.5 15.15 29.6028 17.057 27.6895 19.3248C25.7613 21.6103 22.974 24.0662 19.4675 27.1467L19.4653 27.1486L18.5 28L17.5347 27.1486Z" stroke-width="3"/>
                   </svg>                                    
@@ -345,7 +413,6 @@
       </ul>
     </section>
   </main>
-
 
   <footer class="Footer">
     <div class="container">
@@ -406,9 +473,96 @@
     </div>
   </footer>
 
+  <div class="modal fade" id="modalCallback" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          <form action="">
+            <h3>Обратный звонок</h3>
+            <p class="fs-08 gray mb-2">Имя</p>
+            <input type="text" class="mb-3" placeholder="Имя">
+            <p class="fs-08 gray mb-2">Телефон</p>
+            <input type="tel" class="mb-3" placeholder="+7 000 000-00-00">
+            <p class="fs-08 gray mb-2">Тема обращения</p>
+            <select class="input mb-3">
+              <option value="0" selected disabled>Выберите тему</option>
+              <option value="1">Отзывы и предложения</option>
+              <option value="2">Консультация по товару</option>
+              <option value="3">Сервис и техническое обслуживание</option>
+              <option value="4">Другое</option>
+            </select>
+            <button type="button" class="btn-1 w-100 py-3">Оставить заявку</button>
+            <label class="mt-3">
+              <input type="checkbox">
+              <span class="ms-2 gray">Согласен на <a href="politics.html" class="dark link">обработку личных данных</a></span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          <ul class="tabs tabsPills row row-cols-2 gx-2 gx-sm-4" id="loginTabs" role="tablist">
+            <li role="presentation">
+              <button class="w-100 active" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab"aria-selected="true">Вход</button>
+            </li>
+            <li role="presentation">
+              <button class="w-100" data-bs-toggle="tab" data-bs-target="#registration" type="button" role="tab" aria-selected="false">Регистрация</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="loginTabsContent">
+            <!-- Tab #1 - Login -->
+            <div class="tab-pane fade show active" id="login" role="tabpanel" tabindex="0">
+              <form action="">
+                <p class="fs-08 gray mb-2">E-mail</p>
+                <input type="email" class="mb-3" placeholder="E-mail">
+                <p class="fs-08 gray mb-2">Пароль</p>
+                <input type="password" class="mb-3">
+                <label>
+                  <input type="checkbox">
+                  <span class="gray ms-2">Запомнить меня</span>
+                </label>
+                <button type="button" class="btn-1 py-3 fs-6 w-100 mt-3">Войти</button>
+                <a href="" class="mt-3 d-block text-center mx-auto link">Забыли пароль?</a>
+              </form>
+            </div>
+
+            <!-- Tab #1 - Registration -->
+            <div class="tab-pane fade" id="registration" role="tabpanel" tabindex="0">
+              <form action="">
+                <p class="fs-08 gray mb-2">Имя <span class="red">*</span></p>
+                <input type="text" class="mb-3" placeholder="Имя">
+                <p class="fs-08 gray mb-2">Фамилия <span class="red">*</span></p>
+                <input type="text" class="mb-3" placeholder="Фамилия">
+                <p class="fs-08 gray mb-2">E-mail <span class="red">*</span></p>
+                <input type="email" class="mb-3" placeholder="E-mail">
+                <p class="fs-08 gray mb-2">Телефон <span class="red">*</span></p>
+                <input type="tel" class="mb-3" placeholder="+7 000 000-00-00">
+                <p class="fs-08 gray mb-2">Пароль <span class="red">*</span></p>
+                <input type="password" class="mb-3">
+                <p class="fs-08 gray mb-2">Подтверждение пароля <span class="red">*</span></p>
+                <input type="password" class="mb-3">
+                <label>
+                  <input type="checkbox">
+                  <span class="gray ms-2">Согласен на <a href="politics.html" class="link">обработку личных данных</a></span>
+                </label>
+                <button type="button" class="btn-1 py-3 fs-6 w-100 mt-3">Войти</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <!-- <script type="text/javascript" src="js/index.js"></script> -->
   <script type="text/javascript" src="js/sliders.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>

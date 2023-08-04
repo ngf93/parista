@@ -96,10 +96,12 @@ $bp-xxl: 1399.98px;
     &::-webkit-input-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
         color: $color;
         font-weight: $fw;
+        font-size: .9em;
     }
     &::placeholder {
         color: $color;
         font-weight: $fw;
+        font-size: .9em;
     }
 }
 @mixin roundedImg($w, $rad:50%, $fit:cover) {
@@ -1009,6 +1011,9 @@ body {
     max-width: 100vw;
     overflow-x: hidden;
     font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smooth: always;
     @media (max-width: 768px) {
         font-size: 14px;
     }
@@ -1807,11 +1812,16 @@ header {
     --img-h: 350px;
     position: relative;
     padding: 3em 0em;
+    @media (max-width: $bp-xxl) {
+        .box {padding: 2.5em;}
+    }
     @media (max-width: $bp-xl) {
         --img-h: 300px;
+        .box {padding: 2em;}
     }
     @media (max-width: $bp-lg) {
         --img-h: 270px;
+        .box {padding: 1.5em;}
     }
     @media (max-width: $bp-md) {
         --img-h: 35vw;
@@ -2557,16 +2567,16 @@ header {
                 padding: 4em 3em 2em;
             }
             @media (max-width: $bp-sm) {
-                padding: 2em;
+                padding: 3.5em 2em 2em;
             }
             .bg-1 {
                 @include shadow();
                 @include absBG(0, 0px, 100%);
                 object-fit: cover;
                 object-position: center top;
-                @media (max-width: $bp-sm) {
-                    display: none;
-                }
+                // @media (max-width: $bp-sm) {
+                //     display: none;
+                // }
             }
             .bg-2 {
                 position: absolute;
@@ -2778,7 +2788,6 @@ header {
         }
     }
 }
-
 /* Compare END */
 
 
