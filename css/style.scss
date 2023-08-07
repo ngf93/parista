@@ -2746,9 +2746,17 @@ header {
 
 /* Compare */
 .sec-compare {
+    .box {
+        @media (max-width: $bp-sm) {
+            padding: 1em;
+        }
+    }
     .wrap {
         position: relative;
         padding: 0 10%;
+        @media (max-width: $bp-sm) {
+            padding: 0 1em;
+        }
         .swiper-free {
             position: unset;
             padding-bottom: 0px;
@@ -2769,6 +2777,58 @@ header {
                 bottom: unset;
                 transform: translateY(-50%);
             }
+        }
+    }
+    .product-card {
+        position: relative;
+        @media (max-width: $bp-sm) {
+            font-size: .9em;
+        }
+        &-img {
+            @media (max-width: $bp-sm) {
+                height: 20vw;
+            }
+        }
+        .del {
+            position: absolute;
+            z-index: 10;
+            top: .5em;
+            right: .5em;
+            color: $light-gray;
+            transition: $transition;
+            &:hover {
+                color: $sky;
+            }
+            svg {
+                font-size: 2em;
+            }
+        }
+    }
+    .swiper {
+        padding-bottom: 0px;
+        &-compare, &-compare-2, &-compare-3, &-compare-4 {
+            padding-bottom: 2em;
+        }
+        &-button {
+            display: flex !important;
+            color: $dark-gray;
+            background-color: transparent;
+            width: 1.5em;
+            height: 1.5em;
+            &::after {
+                font-size: 1em;
+            }
+            &-prev {
+                left: 20%;
+                right: unset;
+            }
+            &-next {
+                right: 20%;
+            }
+        }
+        &-pagination-fraction {
+            font-weight: 700;
+            bottom: 0.25em;
         }
     }
 }

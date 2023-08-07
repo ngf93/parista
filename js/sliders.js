@@ -149,7 +149,138 @@ const swiper8 = new Swiper('.swiper-free', {
   loop: true,
   freeMode: true,
   slidesPerView: 'auto',
-  spaceBetween: 30,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    576: {
+      spaceBetween: 15,
+    },
+    768: {
+      spaceBetween: 20,
+    },
+    992: {
+      spaceBetween: 25,
+    },
+    1200: {
+      spaceBetween: 30,
+    }
+  }
+});
+
+const swiper9 = new Swiper('.swiper-specifications', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: false,
+  pagination: false,
+  rewind: true,
+  grabCursor: false,
+  simulateTouch: false,
+  allowTouchMove: false
+});
+const swiper10 = new Swiper('.swiper-compare', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  rewind: true,
+  controller: {
+    control: swiper9,
+    by: 'slide',
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+    renderFraction: function (currentClass, totalClass) {
+      return '<span class="' + currentClass + '"></span>' +
+              ' из ' +
+              '<span class="' + totalClass + '"></span>';
+  }
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiper11 = new Swiper('.swiper-specifications-2', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: false,
+  pagination: false,
+  rewind: true,
+  grabCursor: false,
+  simulateTouch: false,
+  allowTouchMove: false
+});
+const swiper12 = new Swiper('.swiper-compare-2', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  rewind: true,
+  controller: {
+    control: swiper11,
+    by: 'slide',
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiper13 = new Swiper('.swiper-specifications-3', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: false,
+  pagination: false,
+  rewind: true,
+  grabCursor: false,
+  simulateTouch: false,
+  allowTouchMove: false
+});
+const swiper14 = new Swiper('.swiper-compare-3', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  rewind: true,
+  controller: {
+    control: swiper13,
+    by: 'slide',
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiper15 = new Swiper('.swiper-specifications-4', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: false,
+  pagination: false,
+  rewind: true,
+  grabCursor: false,
+  simulateTouch: false,
+  allowTouchMove: false
+});
+const swiper16 = new Swiper('.swiper-compare-4', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  rewind: true,
+  controller: {
+    control: swiper15,
+    by: 'slide',
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
