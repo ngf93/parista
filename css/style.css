@@ -1448,6 +1448,7 @@ main .bgTop {
   width: 100%;
   height: var(--h);
   z-index: -1;
+  overflow: hidden;
 }
 
 main .bgTop.darken {
@@ -1455,9 +1456,22 @@ main .bgTop.darken {
           filter: brightness(0.8);
 }
 
+main .bgTop.long {
+  --h: 550px;
+}
+
 @media (max-width: 991.98px) {
   main .bgTop {
     --h: 350px;
+  }
+  main .bgTop.long {
+    --h: 350px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  main .bgTop.long {
+    --h: 250px;
   }
 }
 
@@ -1466,6 +1480,11 @@ main .bgTop img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+main .bgTop img.blur {
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
 }
 
 header {
@@ -4105,6 +4124,98 @@ header .hoverMenu {
           transform: translate(-50%, -50%);
   z-index: 1;
   width: 3em;
+}
+
+/* Sale */
+.sale-offer {
+  border-radius: 1.5em;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  isolation: isolate;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  background-color: #fff;
+  -webkit-filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+  height: 100%;
+}
+
+.sale-offer img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1399.98px) {
+  .sale-offer img {
+    height: 270px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .sale-offer img {
+    height: 225px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .sale-offer img {
+    height: 340px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sale-offer img {
+    height: 255px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sale-offer img {
+    height: 43vw;
+  }
+}
+
+.sale-offer .btn-1 {
+  font-size: 1.5em;
+  padding: 0.8em 1.1em;
+}
+
+@media (max-width: 575.98px) {
+  .sale-offer .btn-1 {
+    font-size: 1.25em;
+  }
+}
+
+.sec-freeDelivery h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 8em;
+}
+
+@media (max-width: 991.98px) {
+  .sec-freeDelivery h1 {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sec-freeDelivery h1 {
+    font-size: 3em;
+  }
+}
+
+.sec-freeDelivery-limitation {
+  background-color: #fff;
+  padding: 1.5em 0px;
+}
+
+@media (max-width: 991.98px) {
+  .sec-freeDelivery-limitation {
+    padding: 1em 0px;
+  }
 }
 
 /* 404 page */
