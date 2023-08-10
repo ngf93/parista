@@ -208,6 +208,9 @@ h6 {
     line-height: 100%;
     font-size: .95em;
 }
+.rem-075 {
+    font-size: 0.75rem;
+}
 .fs {
     &-08 {font-size: 0.8em;}
     &-09 {font-size: 0.9em;}
@@ -676,7 +679,15 @@ hr {margin: 0;}
             right: 0px;
             left: unset;
         }
-    } 
+    }
+    &-fade {
+        .swiper-slide {
+            opacity: 0 !important;
+            &-active {
+                opacity: 1 !important;
+            }
+        }
+    }
 }
 .table {
     tr {
@@ -2457,6 +2468,191 @@ header {
 }
 /* Services END */
 
+/* Projects */
+.sec-projects {
+    --h: 500px;
+    @media (max-width: $bp-xl) {
+        --h: 450px;
+    }
+    @media (max-width: $bp-lg) {
+        --h: 380px;
+        .box {
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0px;
+        }
+    }
+    @media (max-width: $bp-md) {
+        --h: 300px;
+    }
+    @media (max-width: $bp-sm) {
+        --h: 50vw;
+    }
+    .swiper-projects {
+        position: unset;
+        padding-bottom: 0px;
+        overflow: visible;
+        .swiper-button-prev {
+            top: 50%;
+            left: -1.5em;
+            right: unset;
+        }
+        .swiper-button-next {
+            top: 50%;
+            right: -1.5em;
+            left: unset;
+        }
+    }
+    .projects-cover {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5em;
+        @include safariFix();
+        img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: var(--h);
+            object-fit: cover;
+            filter: brightness(65%) blur(3px);
+        }
+        figcaption {
+            @include absBG(10, 0%, 100%);
+            @include flex();
+            color: $white;
+            font-size: 6em;
+            font-family: $title-font;
+            text-align: center;
+            @media (max-width: $bp-xl) {
+                font-size: 4.5em;
+            }
+            @media (max-width: $bp-lg) {
+                font-size: 3.5em;
+            }
+            @media (max-width: $bp-md) {
+                font-size: 2.5em;
+            }
+            @media (max-width: $bp-sm) {
+                font-size: 2em;
+            }
+        }
+    } 
+    .project {
+        background-color: $white;
+        border-radius: 1.5em;
+        @include shadow();
+        padding: 2.5em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        height: var(--h);
+        grid-template-areas: 
+        "gallery address"
+        "gallery info"
+        "gallery info"
+        "thumbs info"
+        "thumbs info2";
+        gap: .6em 1.8em;
+        @media (max-width: $bp-xl) {
+            grid-template-columns: 4fr 5fr;
+            grid-template-rows: repeat(7, 1fr);
+            grid-template-areas: 
+            "gallery address"
+            "gallery info"
+            "gallery info"
+            "gallery info"
+            "gallery info"
+            "thumbs info2"
+            "thumbs info2";
+        }
+        @media (max-width: $bp-lg) {
+            grid-template-columns: 5fr 4fr;
+            grid-template-rows: 1fr 3fr;
+            grid-template-areas: 
+            "address info"
+            "gallery info2";
+        }
+        @media (max-width: $bp-sm) {
+            padding: 1.5em;
+            gap: .6em 1em;
+            grid-template-rows: 1fr 2fr;
+            grid-template-areas: 
+            "address info2"
+            "gallery info2";
+        }
+        &>* {
+            min-width: 0px;
+        }
+        .swiper-gallery {
+            grid-area: gallery;
+            width: 100%;
+            padding-bottom: 0px;
+            .swiper-slide {
+                opacity: 1 !important;
+                pointer-events: all;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: .5em;
+                }
+            }
+        }
+        .swiper-galleryThumbs {
+            grid-area: thumbs;
+            width: 100%;
+            padding-bottom: 0px;
+            @media (max-width: $bp-xl) {
+                display: none;
+            }
+            .swiper-slide {
+                opacity: 1 !important;
+                pointer-events: all;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: .35em;
+                }
+            }
+        }
+        address {
+            grid-area: address;
+            @include flex(row, flex-start, center, nowrap);
+        }
+        .info {
+            grid-area: info;
+            @media (max-width: $bp-sm) {
+                display: none;
+            }
+        }
+        .info2 {
+            grid-area: info2;
+            @include flex(row, flex-start, center, nowrap);
+            @media (max-width: $bp-lg) {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+        h4 {
+            text-align: start;
+        }
+        ol {
+            @include list();
+            counter-reset: myCounter;
+            margin-bottom: 1em;
+            li {
+                &:before {
+                    counter-increment: myCounter;
+                    content: counter(myCounter) ". ";
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+/* Projects END */
 
 /* Contacts */
 .sec-contacts {
@@ -2959,6 +3155,9 @@ header {
 
 
 .modal {
+    &-lg {
+        --bs-modal-width: 650px;
+    }
     &-content {
         border: none;
         position: relative;

@@ -421,7 +421,7 @@
                   <p class="green">- 4 000 ₽</p>
                 </div>
 
-                <button type="button" class="btn-1 w-100 mt-2">Подтвердить заказ</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#popupSuccess" class="btn-1 w-100 mt-2">Подтвердить заказ</button>
                 <p class="fs-08 gray mt-2">Нажимая кнопку "Подтвердить заказ", вы соглашаетесь c <a href="politics.html" class="link">с политикой конфиденциальности</a> и <a href="politics.html" class="link">пользовательским соглашением</a></p>
               </div>
             </div>
@@ -488,6 +488,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal fade" id="popupSuccess" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="img/icon/checkGreen.svg" alt="checkGreen" class="d-block mx-auto mb-3">       
+            <h3 class="text-center">Ваш заказ успешно оформлен</h3>
+            <p class="text-center mb-3">Мы свяжемся с вами в ближайшее время для уточнения деталей заказа</p>
+            <p class="text-center fw-7">Номер вашего заказа - с5869</p>
+            <button type="button" data-bs-dismiss="modal" class="btn-1 w-100 py-3 fs-6 mt-4">Вернуться назад</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="modal fade" id="modalCallback" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">

@@ -288,10 +288,10 @@
             </h2>
             <div class="d-none d-md-flex row row-cols-2 gx-2 gx-lg-4">
               <div>
-                <button type="button" class="btn-1 w-100 fs-6 py-3">Расчитать монтаж</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#modalCalculate" class="btn-1 w-100 fs-6 py-3">Расчитать монтаж</button>
               </div>
               <div>
-                <button type="button" class="btn-3 w-100 fs-6 py-3">Наши проекты</button>
+                <a href="projects.html" class="btn-3 w-100 fs-6 py-3">Наши проекты</a>
               </div>
             </div>
           </div>
@@ -1106,6 +1106,102 @@
               </form>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalCalculate" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          <form action="">
+            <div class="row">
+              <div class="col-6">
+                <h3>Рассчитаем монтаж</h3>
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">ФИО</div>
+                    <input type="text" placeholder="ФИО">
+                  </div>
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">Email</div>
+                    <input type="email" placeholder="Email">
+                  </div>
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">Телефон</div>
+                    <input type="tel" placeholder="+7 000 000-00-00">
+                  </div>
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">Адрес объекта</div>
+                    <input type="text" placeholder="Адрес объекта">
+                  </div>
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">Помещение 1</div>
+                    <select class="input">
+                      <option selected disabled value="0">Выберите</option>
+                      <option value="1">Квартира</option>
+                      <option value="2">Квартира</option>
+                      <option value="3">Квартира</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">Площадь помещения 1, м<sup>2</sup></div>
+                    <input type="number" placeholder="0">
+                  </div>
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">Помещение 2</div>
+                    <select class="input">
+                      <option selected disabled value="0">Выберите</option>
+                      <option value="1">Квартира</option>
+                      <option value="2">Квартира</option>
+                      <option value="3">Квартира</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">Площадь помещения 2, м<sup>2</sup></div>
+                    <input type="number" placeholder="0">
+                  </div>
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">Помещение 3</div>
+                    <select class="input">
+                      <option selected disabled value="0">Выберите</option>
+                      <option value="1">Квартира</option>
+                      <option value="2">Квартира</option>
+                      <option value="3">Квартира</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">Площадь помещения 3, м<sup>2</sup></div>
+                    <input type="number" placeholder="0">
+                  </div>
+                  <div class="col-12">
+                    <div class="rem-075 gray mb-1">Отвод дренажа</div>
+                    <select class="input">
+                      <option selected disabled value="0">Выберите</option>
+                      <option value="1">Улица</option>
+                      <option value="2">Улица</option>
+                      <option value="3">Улица</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <div class="rem-075 gray mb-1">Доп. Информация</div>
+                    <textarea rows="4"></textarea>
+                  </div>
+                  <div class="col-6 align-self-end">
+                    <button type="button" class="btn-1 w-100 py-3" disabled>
+                      Отправить
+                    </button>
+                    <p class="rem-075 gray mt-2">Нажимая "Отправить", я даю свое согласие на <a href="politics.html" class="link">обработку персональных данных</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

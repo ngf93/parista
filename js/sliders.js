@@ -146,7 +146,7 @@ const swiper7 = new Swiper('.swiper-1', {
 });
 
 const swiper8 = new Swiper('.swiper-free', {
-  loop: true,
+  loop: false,
   freeMode: true,
   slidesPerView: 'auto',
   spaceBetween: 10,
@@ -284,5 +284,31 @@ const swiper16 = new Swiper('.swiper-compare-4', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiper17 = new Swiper('.swiper-projects', {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: false,
+  effect: 'fade',
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
+var swiper18 = new Swiper(".swiper-galleryThumbs", {
+  direction: 'horizontal',
+  spaceBetween: 10,
+  slidesPerView: 3,
+  watchSlidesProgress: true,
+});
+var swiper19 = new Swiper(".swiper-gallery", {
+  spaceBetween: 10,
+  thumbs: {
+    swiper: swiper18,
   },
 });
