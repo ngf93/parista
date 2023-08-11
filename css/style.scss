@@ -485,6 +485,7 @@ button {
         transition: $transition;
         padding: 6px 10px;
         border-radius: 8px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.06);
         .badge {
             background-color: $light-gray;
             color: inherit;
@@ -494,9 +495,10 @@ button {
             border-radius: 3px;
             transition: $transition;
         }
-        &.active {
+        &:hover, &.active {
             background-color: $sky;
             color: $white;
+            box-shadow: 0px 0px 6px 0px rgba(63, 104, 153, 0.13);
             .badge {
                 background-color: rgba($color: $white, $alpha: 0.5);
             }
@@ -1009,6 +1011,9 @@ nav.pagination {
 
 
 /* Main Styles*/
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: $main-font;
     color: $dark-gray;
@@ -1396,6 +1401,8 @@ header {
             margin-bottom: 1em;
         }
         h4 {
+            position: relative;
+            z-index: 2;
             font-size: 1.25em;
             @media (max-width: $bp-sm) {
                 font-size: 1em;
@@ -1745,6 +1752,7 @@ header {
 
 /* Product */
 .product-card {
+    position: relative;
     font-size: 16px;
     width: 100%;
     position: relative;
@@ -1764,6 +1772,9 @@ header {
         height: 160px;
         object-fit: scale-down;
         margin-bottom: 1em;
+        @media (max-width: $bp-sm) {
+            height: 40vw;
+        }
     }
     &-characteristics {
         @include list();
@@ -1826,6 +1837,20 @@ header {
         font-size: 1.5em;
         @media (max-width: $bp-lg) {
             font-size: 1em;
+        }
+    }
+    .del {
+        position: absolute;
+        z-index: 10;
+        top: .5em;
+        right: .5em;
+        color: $light-gray;
+        transition: $transition;
+        &:hover {
+            color: $sky;
+        }
+        svg {
+            font-size: 2em;
         }
     }
 }
@@ -1950,9 +1975,10 @@ header {
             @include flex(row, flex-start, center, wrap);
             li {
                 margin-right: 10px;
-                margin-bottom: 4px;
+                margin-bottom: 10px;
                 label {
                     position: relative;
+                    cursor: pointer;
                     .text {
                         position: relative;
                         z-index: 1;
@@ -1961,6 +1987,7 @@ header {
                         border-radius: 6px;
                         padding: 6px 10px;
                         transition: $transition;
+                        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.06);
                         @media (max-width: $bp-sm) {
                             padding: 3px 5px;
                         }
@@ -1979,9 +2006,11 @@ header {
                     input {
                         @include absBG(2, 0%, 100%);
                         opacity: 0;
+                        cursor: pointer;
                         &:checked + .text {
                             background-color: $sky;
                             color: $white;
+                            box-shadow: 0px 0px 6px 0px rgba(63, 104, 153, 0.13);
                             .price {
                                 background-color: rgba($color: $white, $alpha: 0.5);
                             }
@@ -2219,6 +2248,7 @@ header {
     }
 }
 .filterForm {
+    width: 100%;
     &-item {
         margin-bottom: 1.5em
     }
@@ -3057,6 +3087,7 @@ header {
         }
         .swiper-free {
             position: unset;
+            padding: 5px 0px;
             padding-bottom: 0px;
             .swiper-slide {
                 width: fit-content;
@@ -3085,20 +3116,6 @@ header {
         &-img {
             @media (max-width: $bp-sm) {
                 height: 20vw;
-            }
-        }
-        .del {
-            position: absolute;
-            z-index: 10;
-            top: .5em;
-            right: .5em;
-            color: $light-gray;
-            transition: $transition;
-            &:hover {
-                color: $sky;
-            }
-            svg {
-                font-size: 2em;
             }
         }
     }
@@ -3208,6 +3225,7 @@ header {
 }
 .offcanvas-lg {
     &-body {
+        width: 100%;
         @media (max-width: $bp-lg) {
             overflow-y: auto;
             height: 100vh;
