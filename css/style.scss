@@ -2466,6 +2466,35 @@ header {
         }
     }
 }
+.formCalculate {
+    .box2 {
+        border: 1px solid #B6B6B6;
+        border-radius: 1em;
+        padding: 1.25em 1.5em;
+        @media (max-width: $bp-md) {
+            padding: 0.75em;
+        }
+    }
+    #drop-area {
+        border: 2px dashed $light-gray;
+        border-radius: 1em;
+        width: 100%;
+        padding: 1em;
+        @include flex(column, center, center, nowrap);
+        transition: border-color $transition;
+        &.highlight {
+            border-color: $sky;
+        }
+        label {
+            display: inline;
+            cursor: pointer;
+        }
+    }
+    #list {
+        @include list();
+        margin-top: 1.5em;
+    }
+}
 /* Services END */
 
 /* Projects */

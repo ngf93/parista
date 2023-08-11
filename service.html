@@ -301,8 +301,8 @@
         </di>
       </div>
       <div class="block6">
-        <button type="button" class="btn-1 w-100 fs-6 py-3 mb-2">Расчитать монтаж</button>
-        <button type="button" class="btn-3 w-100 fs-6 py-3">Наши проекты</button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modalCalculate" class="btn-1 w-100 fs-6 py-3 mb-2">Расчитать монтаж</button>
+        <a href="projects.html" class="btn-3 w-100 fs-6 py-3">Наши проекты</a>
       </div>
       <div class="block2">
         <h3 class="mb-1">Быстрый выезд</h3>
@@ -1116,28 +1116,28 @@
       <div class="modal-content">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
-          <form action="">
+          <form action="" class="formCalculate">
             <div class="row">
-              <div class="col-6">
+              <div class="col-12 col-xl-6">
                 <h3>Рассчитаем монтаж</h3>
-                <div class="row g-3">
-                  <div class="col-6">
+                <div class="row g-2 g-lg-3">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">ФИО</div>
                     <input type="text" placeholder="ФИО">
                   </div>
-                  <div class="col-6">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">Email</div>
                     <input type="email" placeholder="Email">
                   </div>
-                  <div class="col-6">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">Телефон</div>
                     <input type="tel" placeholder="+7 000 000-00-00">
                   </div>
-                  <div class="col-6">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">Адрес объекта</div>
                     <input type="text" placeholder="Адрес объекта">
                   </div>
-                  <div class="col-6">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">Помещение 1</div>
                     <select class="input">
                       <option selected disabled value="0">Выберите</option>
@@ -1146,11 +1146,11 @@
                       <option value="3">Квартира</option>
                     </select>
                   </div>
-                  <div class="col-6">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">Площадь помещения 1, м<sup>2</sup></div>
                     <input type="number" placeholder="0">
                   </div>
-                  <div class="col-6">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">Помещение 2</div>
                     <select class="input">
                       <option selected disabled value="0">Выберите</option>
@@ -1159,11 +1159,11 @@
                       <option value="3">Квартира</option>
                     </select>
                   </div>
-                  <div class="col-6">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">Площадь помещения 2, м<sup>2</sup></div>
                     <input type="number" placeholder="0">
                   </div>
-                  <div class="col-6">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">Помещение 3</div>
                     <select class="input">
                       <option selected disabled value="0">Выберите</option>
@@ -1172,7 +1172,7 @@
                       <option value="3">Квартира</option>
                     </select>
                   </div>
-                  <div class="col-6">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">Площадь помещения 3, м<sup>2</sup></div>
                     <input type="number" placeholder="0">
                   </div>
@@ -1185,11 +1185,11 @@
                       <option value="3">Улица</option>
                     </select>
                   </div>
-                  <div class="col-6">
+                  <div class="col-12 col-sm-6">
                     <div class="rem-075 gray mb-1">Доп. Информация</div>
                     <textarea rows="4"></textarea>
                   </div>
-                  <div class="col-6 align-self-end">
+                  <div class="col-12 col-sm-6 align-self-end">
                     <button type="button" class="btn-1 w-100 py-3" disabled>
                       Отправить
                     </button>
@@ -1197,8 +1197,16 @@
                   </div>
                 </div>
               </div>
-              <div class="col-6">
-                
+              <div class="col-12 col-xl-6 mt-4 mt-xl-0">
+                <div class="box2 h-100">
+                  <fieldset id="drop-area">
+                    <img src="img/icon/image-add.svg" alt="image-add" class="mb-3">
+                    <input hidden type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                    <p class="text-center"><label class="fw-7 sky" for="fileElem">Загрузите файл</label> или перетащите</p>
+                    <p class="text-center">Вы можете загрузить: 10</p>
+                  </fieldset>
+                  <ul id="list" ></ul>
+                </div>
               </div>
             </div>
           </form>
@@ -1211,5 +1219,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="js/sliders.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/dragAndDropUpload.js"></script>
 </body>
 </html>
