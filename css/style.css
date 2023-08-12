@@ -4043,7 +4043,7 @@ header .hoverMenu {
 }
 
 .formCalculate #list li .delFile:hover, .formCalculate #list li .delFile:focus, .formCalculate #list li .delFile:active {
-  color: 1;
+  opacity: 1;
 }
 
 /* Services END */
