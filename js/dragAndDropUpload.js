@@ -45,9 +45,9 @@ function handleFiles(files) {
 }
 
 function previewFile(file) {
-  let li = document.createElement('li')
-  li.innerHTML = file.name
-  document.getElementById('list').appendChild(li)
+  let li = document.createElement('li');
+  li.innerHTML = '<span class="name">'+ file.name + '</span> <span class="mx-1">-</span> <span class="sky">файл успешно загружен</span> <button type="button" class="delFile"></button>';
+  document.getElementById('list').appendChild(li);
 }
 
 // function uploadFile(file, i) {

@@ -821,7 +821,7 @@ nav.pagination {
             a, button {
                 color: $gray;
                 background-color: $white;
-                border-radius: 1em;
+                border-radius: 7px;
                 padding: 1em 2em;
                 display: block;
                 position: relative;
@@ -2506,23 +2506,43 @@ header {
         }
     }
     #drop-area {
+        position: relative;
         border: 2px dashed $light-gray;
         border-radius: 1em;
         width: 100%;
         padding: 1em;
         @include flex(column, center, center, nowrap);
         transition: border-color $transition;
-        &.highlight {
+        &:hover, &:focus, &.highlight {
             border-color: $sky;
         }
-        label {
-            display: inline;
+        p {font-size: .8em;}
+        input {
+            @include absBG(10, 0px, 100%);
+            opacity: 0;
             cursor: pointer;
         }
     }
     #list {
         @include list();
         margin-top: 1.5em;
+        li {
+            @include flex(row, flex-start, center, nowrap);
+            font-size: .8em;
+            margin-bottom: 0.5em;
+            .delFile {
+                width: 1.2em;
+                height: 1.2em;
+                background-image: url(../img/icon/cross.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 0.6;
+                margin-left: 0.5em;
+                &:hover, &:focus, &:active {
+                    color: 1;
+                }
+            }
+        }
     }
 }
 /* Services END */
@@ -3255,6 +3275,7 @@ header {
     }
     &-content {
         border: none;
+        border-radius: 25px;
         position: relative;
     }
     .btn-close {
