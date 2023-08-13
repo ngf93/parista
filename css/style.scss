@@ -2259,7 +2259,7 @@ header {
             width: 1.5em;
             height: 1.5em;
             transform: rotate(0deg);
-            transition: $transition;
+            // transition: $transition;
         }
         &[aria-expanded="true"]{
             .icon {
@@ -2267,12 +2267,11 @@ header {
             } 
         }
     }
-    .collapse {
+    &-list {
+        list-style: none;
         padding: 1em 0px;
-        ul {
-            li:not(:first-child){
-                margin-top: .5em;
-            }
+        li:not(:first-child){
+            margin-top: .5em;
         }
     }
 }

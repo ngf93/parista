@@ -3597,8 +3597,6 @@ header .hoverMenu {
   height: 1.5em;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: 300ms ease-in;
-  transition: 300ms ease-in;
 }
 
 .filterForm-toggler[aria-expanded="true"] .icon {
@@ -3606,11 +3604,12 @@ header .hoverMenu {
           transform: rotate(180deg);
 }
 
-.filterForm .collapse {
+.filterForm-list {
+  list-style: none;
   padding: 1em 0px;
 }
 
-.filterForm .collapse ul li:not(:first-child) {
+.filterForm-list li:not(:first-child) {
   margin-top: .5em;
 }
 
