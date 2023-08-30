@@ -868,7 +868,7 @@ nav.pagination {
     height: 2px;
     border-radius: 2px;
     text-align: left;
-    margin: 2em 0 .5em;
+    padding: 2em 0 .5em;
     &-view {
         position: absolute;
         left: 13px;
@@ -2283,6 +2283,16 @@ header {
         padding: 1em 0px;
         li:not(:first-child){
             margin-top: .5em;
+        }
+    }
+}
+#offcanvasFilter {
+    .offcanvas-body {
+        @media (max-width: $bp-lg) {
+            padding: calc(var(--h-height) + 1em) 1em 2em;
+        }
+        @media (max-width: $bp-sm) {
+            font-size: 14px;
         }
     }
 }
