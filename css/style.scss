@@ -3197,6 +3197,20 @@ header {
             bottom: 0.25em;
         }
     }
+    &-block {
+        div {
+            &:nth-child(3){
+                @media (max-width: $bp-md) {
+                    display: none;
+                }
+            }
+            &:nth-child(4){
+                @media (max-width: $bp-xl) {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 .deleteAll {
     svg {
