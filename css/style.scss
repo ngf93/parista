@@ -640,6 +640,7 @@ hr {margin: 0;}
     }
 }
 .swiper {
+    height: fit-content;
     padding-bottom: 4em;
     @media (max-width: $bp-lg) {
         padding-bottom: 0px;
@@ -1325,6 +1326,12 @@ header {
             position: relative;
             z-index: 10;
             margin-bottom: 0px;
+        }
+        a {
+            &::after {
+                content: '';
+                @include absBG(10, 0%, 100%);
+            }
         }
     }
     &-item:nth-child(1) {
@@ -3180,6 +3187,9 @@ header {
             }
             &-next {
                 right: 20%;
+            }
+            &-lock {
+                display: none !important;
             }
         }
         &-pagination-fraction {
