@@ -232,7 +232,7 @@ const swiper101 = new Swiper('.swiper-compare-1', {
   spaceBetween: 20,
   rewind: true,
   controller: {
-    control: swiper9,
+    control: swiper91,
     by: 'slide',
   },
   pagination: {
